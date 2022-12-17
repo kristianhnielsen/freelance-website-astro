@@ -1,0 +1,177 @@
+---
+---
+
+<header>
+  <a href="/">
+    <img src="/assets/svg/logo.svg" alt="KN encapsulated by </>" class="logo" />
+  </a>
+  <button class="hamburger" aria-expanded="false">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+  <nav data-visible="false">
+    <a href="/">Forside</a>
+    <a href="/services">Services</a>
+    <a href="/about">Om</a>
+    <a href="/contact">Kontakt</a>
+  </nav>
+</header>
+
+<script>
+  const hamburgerButton = document.querySelector("button.hamburger");
+  const navigation = document.querySelector("nav");
+
+  // if not mobile view, then show data-visible as true
+  // this is purely for aethstetics, it has no effects on JS or CSS otherwise
+  if (window.innerWidth >= 700) {
+    navigation?.setAttribute("data-visible", "true");
+  }
+
+  hamburgerButton?.addEventListener("click", () => {
+    const visibility = navigation?.getAttribute("data-visible");
+
+    if (visibility === "false") {
+      navigation?.setAttribute("data-visible", "true");
+      hamburgerButton?.setAttribute("aria-expanded", "true");
+    } else if (visibility === "true") {
+      navigation?.setAttribute("data-visible", "false");
+      hamburgerButton?.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
+
+<style lang="scss">
+  header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    width: 100%;
+    border-bottom: var(--dark);
+    background-color: var(--white);
+    border-radius: 0 0 10px 10px;
+
+    // desktop
+    @media (min-width: 700px) {
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+  }
+
+  .logo {
+    height: var(--navbar-height);
+    width: calc(var(--navbar-height) * 2 - 30px);
+    margin: 0 30px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 15%;
+    width: 100%;
+    align-items: center;
+    border-bottom: 3px var(--accent-primary) solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark);
+
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-out;
+    padding-top: calc(var(--navbar-height) + 10px);
+    z-index: 3;
+
+    // bring nav to default position (into view) when menu is visible
+    &[data-visible="true"] {
+      transform: translateY(0%);
+    }
+
+    & a {
+      text-decoration: none;
+      color: var(--white);
+      font-size: 32px;
+      position: relative;
+    }
+  }
+
+  .hamburger {
+    background-color: transparent;
+    border: none;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: var(--navbar-height);
+    cursor: pointer;
+    z-index: 5;
+    aspect-ratio: 1 / 1;
+
+    & .bar {
+      background-color: var(--dark);
+      height: 5px;
+      margin: 3px 0;
+      border-radius: 50px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    // hamburger animation for when menu is visible
+    &[aria-expanded="true"] {
+      & .bar {
+        background-color: var(--accent-primary);
+        &:first-child {
+          transform: translateY(8px) rotate(225deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: translateY(-8px) rotate(-225deg);
+        }
+      }
+    }
+  }
+
+  // desktop view
+  @media (min-width: 700px) {
+    .hamburger {
+      display: none;
+    }
+
+    nav {
+      transform: translateY(0%);
+      background-color: transparent;
+      flex-direction: row;
+      padding: 0;
+      border: none;
+      position: static;
+      justify-content: flex-end;
+
+      & a {
+        color: var(--dark);
+        font-size: 16px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          border-radius: 4px;
+          background-color: var(--accent-primary);
+          bottom: 0;
+          left: 0;
+          transform-origin: right;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+</style>

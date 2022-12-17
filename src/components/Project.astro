@@ -1,0 +1,73 @@
+---
+interface Props {
+  href: string;
+  img: string;
+  name: string;
+  services: string;
+}
+const { href, img, name, services } = Astro.props;
+---
+
+<div class="project">
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <img src={img} alt={`${name} website sample`} />
+    {name}
+    <!-- Add external link icon/arrow -->
+  </a>
+  <p class="services">{services}</p>
+</div>
+
+<style lang="scss">
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    gap: 10px;
+    text-align: center;
+    width: fit-content;
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      color: var(--accent-primary);
+      font-weight: 500;
+      font-size: 20px;
+
+      & img {
+        object-fit: contain;
+        width: 200px;
+        height: fit-content;
+        border-image: linear-gradient(
+            -45deg,
+            var(--accent-primary),
+            transparent 30% 70%,
+            var(--accent-primary)
+          )
+          1;
+        border-style: solid;
+        transition: 0.2s filter ease-out;
+        filter: grayscale(1);
+      }
+
+      &:hover img,
+      &:focus img {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .services {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-secondary);
+  }
+
+  @media (max-width: 700px) {
+    .project img {
+      filter: grayscale(0);
+    }
+  }
+</style>

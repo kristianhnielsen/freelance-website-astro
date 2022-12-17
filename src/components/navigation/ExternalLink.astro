@@ -1,0 +1,18 @@
+---
+const { href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer">
+  <slot />
+  <img
+    src="/assets/svg/external-link.svg"
+    alt="arrow pointing outside of a box"
+  />
+</a>
+
+<style>
+  img {
+    aspect-ratio: 1;
+    width: 15px;
+  }
+</style>

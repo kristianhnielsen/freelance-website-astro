@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Kontakt | Kristian Nielsen Web Udvikling"
+  description="Kontakt Kristian Nielsen freelance web udvikling og kom godt fra start med udviklingen af din nye hjemmeside"
+>
+  <section>
+    <div>
+      <h1>Kontakt</h1>
+      <h2>
+        Udfyld feldterne nedenfor, og lad os komme{" "}
+        <span>godt fra start!</span>
+      </h2>
+    </div>
+    <form
+      action="https://formsubmit.co/kristianhnielsen@protonmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_next" value="localhost:3000/email/tak.html" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="basic" />
+      <input type="hidden" name="_subject" value="New submission!" />
+      <input type="text" name="_honey" style="display:none" />
+      <label for="name">
+        Navn
+        <input
+          type="text"
+          pattern="[a-zA-Z]+"
+          placeholder="John Schmidt"
+          name="name"
+          required
+        />
+      </label>
+      <label for="email">
+        E-mail
+        <input
+          type="email"
+          name="email"
+          placeholder="john@eksempel.com"
+          id="email"
+          required
+          pattern=".+@.+\..+"
+        />
+      </label>
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="Fortæl mig lidt mere her..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</Layout>
+
+<style lang="scss">
+  h2 {
+    font-size: 14px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+
+      & input {
+        padding: 10px;
+        border: var(--dark) 3px solid;
+        border-radius: 10px;
+
+        // State for input elements
+        &:required {
+          &:invalid {
+            border-color: var(--accent-primary);
+          }
+          &:valid {
+            border-color: var(--accent-secondary);
+          }
+        }
+      }
+    }
+
+    & textarea {
+      padding: 5px;
+      line-height: 1.6;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    & button {
+      padding: 15px 40px;
+      width: fit-content;
+      background-color: var(--dark);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid transparent;
+      box-shadow: var(--shadow);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.1s ease-out;
+      align-self: flex-start;
+
+      &:hover {
+        border: 2px solid var(--accent-primary);
+      }
+    }
+  }
+</style>

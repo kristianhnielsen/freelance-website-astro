@@ -1,0 +1,45 @@
+---
+const { href, primary, secondary } = Astro.props;
+---
+
+<a href={href} class:list={["button", { primary, secondary }]}>
+  <slot />
+</a>
+
+<style lang="scss">
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      border: 2px solid var(--accent-primary);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .primary {
+    background-color: var(--dark);
+    color: var(--white);
+
+    @media (max-width: 700px) {
+      border: 2px solid var(--accent-primary);
+    }
+  }
+  .secondary {
+    background-color: var(--white);
+    border: solid 2px var(--dark);
+    color: var(--dark);
+  }
+</style>

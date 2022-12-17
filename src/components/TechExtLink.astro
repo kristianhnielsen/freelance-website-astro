@@ -1,0 +1,45 @@
+---
+const { href, img, name } = Astro.props;
+---
+
+<a class="tech" href={href} target="_blank" rel="noopener noreferrer">
+  <img src={img} alt={`${name.toLowerCase()} icon`} />
+  {name}
+</a>
+
+<style lang="scss">
+  .tech {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    width: fit-content;
+    border-radius: 30px;
+    align-items: center;
+    padding: 10px;
+    border: solid 3px var(--dark);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--dark);
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-primary);
+      padding: 10px 20px;
+    }
+
+    img {
+      width: 30px;
+      aspect-ratio: 1;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .tech {
+      font-size: 12px;
+      padding: 2px 4px;
+    }
+  }
+</style>

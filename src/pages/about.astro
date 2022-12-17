@@ -1,0 +1,100 @@
+---
+import ExternalLink from "../components/navigation/ExternalLink.astro";
+import Tech from "../components/TechTooltip.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Om | Kristian Nielsen Web Udvikling"
+  description="Kort beskrivelse af Kristian Nielsens evner og baggrund."
+>
+  <section class="main">
+    <h1>Om Kristian</h1>
+    <div>
+      <div class="content">
+        <p>
+          Jeg er en selvlært freelance udvikler med speciale i frontend og web
+          udvikling. Jeg startede at lære programmering og web udvikling i 2020,
+          og har prøvet krafter med spiludvikling med{" "}
+          <Tech
+            name="Godot"
+            img="/assets/tech-icons/godot.svg"
+            href="https://godotengine.org/"
+            tooltip="Godot Game Engine er en krydsplatform, gratis og open-source. Den er designed til at lave 2D og 3D spil til bl.a. computer, Android, og iOS."
+          />
+          , backend udvikling med{" "}
+
+          <Tech
+            name="Python"
+            img="/assets/tech-icons/python.svg"
+            href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+            tooltip="Python er et programmeringssprog til generelle formål. Python finder anvendelse i hos data analytikere, udvikling af kunstig intelligens mm. Pythons designfilosofi kendetegnes ved en høj grad af kodelæsbarhed. Python rangerer ofte som et af de mest populære programmeringssprog."
+          />
+          , men har nu fundet mig tilrette i web udvikling med{" "}
+          <Tech
+            name="JavaScript"
+            img="/assets/tech-icons/js.svg"
+            href="https://en.wikipedia.org/wiki/JavaScript"
+            tooltip={`JavaScript, ofte forkortet til JS, er et programmeringssprog som sammen med HTML og CSS, udgør kerneteknologierne for browsere, og dermed internettet udadtil. 98% af alle hjemmesider benytter JavaScript til at modificere indhold og udseende. Ikke at forveklses med programmeringssproget Java.`}
+          />
+          .
+        </p>
+        <p>
+          Bosiddende i det sydlige Kinas handelshovedstad,{" "}
+          <ExternalLink href="https://en.wikipedia.org/wiki/Guangzhou"
+            >Guangzhou</ExternalLink
+          >, har jeg gjort mig vigtige erfaringer med sprogkundskaber,
+          kulturelle forskelle, og hvad der appellerer til brugere i og uden for
+          Danmark.
+        </p>
+      </div>
+      <div class="profile">
+        <img src="/assets/img/profile.png" alt="Kristian profile" />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    & > div {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      text-align: left;
+    }
+
+    & a {
+      color: var(--dark);
+    }
+
+    & .profile {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+
+      & img {
+        object-fit: contain;
+        margin: auto;
+        width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .main section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

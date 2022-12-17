@@ -1,0 +1,140 @@
+---
+import Button from "../components/Button.astro";
+import Project from "../components/Project.astro";
+import Service from "../components/Service.astro";
+import Code from "../components/svg/Code.astro";
+import Design from "../components/svg/Design.astro";
+import Smartphone from "../components/svg/Smartphone.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Kristian Nielsen Web Udvikling"
+  description="Internationalt orienteret udvikler af skalérbare hjemmesider med moderne teknologier, vedligeholdelse af hjemmesider og meget mere. Kristian Nielsen er din lige linje mellem dig og internettet."
+>
+  <section class="hero">
+    <h1>Kristian Nielsen</h1>
+    <h2>Den lige linje mellem dig og internettet</h2>
+    <p>
+      Skalérbare hjemmesider med moderne teknologier, som tillader udbygning og
+      funktionalitet, skræddersyet til dine behov.
+    </p>
+    <div class="buttons">
+      <Button href="/contact" primary>Kontakt</Button>
+      <Button href="/services" secondary>Services</Button>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Services</h2>
+    <div class="service-cards">
+      <Service header="Web Udvikling">
+        <Code isColored />
+      </Service>
+      <Service header="Vedligeholdelse">
+        <Design isColored />
+      </Service>
+      <Service header="Responsiv Design">
+        <Smartphone isColored />
+      </Service>
+    </div>
+    <div class="buttons">
+      <Button href="/services" primary>Mere</Button>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Udvalgte Projekter</h2>
+    <Project
+      img="/assets/img/projects/adhd-konsulent.png"
+      href="https://adhd-konsulent.dk"
+      name="ADHD Konsulent"
+      services="Design, Udvikling, Hosting"
+    />
+  </section>
+
+  <section class="cta">
+    <h2>Interesseret?</h2>
+    <p>Fortæl om dit projekt og kom godt fra start!</p>
+    <div class="buttons">
+      <Button href="/contact" primary>Kontakt</Button>
+      <Button href="/services" secondary>Services</Button>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .hero {
+    align-items: center;
+    text-align: center;
+    gap: 0;
+
+    & h1 {
+      font-weight: 700;
+    }
+
+    & h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--accent-primary);
+    }
+
+    & p {
+      margin: 30px 0 20px 0;
+      max-width: 600px;
+    }
+
+    @media (max-width: 700px) {
+      & h1 {
+        font-size: 36px;
+        font-weight: 900;
+      }
+      & h2 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .services {
+    & .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      width: 100%;
+
+      @media (max-width: 700px) {
+        gap: 30px;
+      }
+    }
+  }
+
+  .projects {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    // uncomment this to make grid for multiple projects
+    // grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+
+  .cta {
+    & h2 {
+      color: var(--accent-primary);
+    }
+
+    & p {
+      color: var(--dark);
+      font-size: 20px;
+    }
+  }
+
+  // General container with more than one button
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+  }
+</style>

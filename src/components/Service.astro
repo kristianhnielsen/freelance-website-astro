@@ -1,0 +1,51 @@
+---
+const { description, header } = Astro.props;
+---
+
+<div class="service">
+  <slot />
+  <article class:list={[{ hasDescription: description }]}>
+    <h2>{header}</h2>
+    {description ? <p>{description}</p> : null}
+  </article>
+</div>
+
+<style lang="scss">
+  .service {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 300px;
+    color: var(--accennt-primary);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding: 15px;
+    gap: 15px;
+
+    & h2 {
+      color: var(--accent-primary);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+      text-align: left;
+    }
+
+    & .hasDescription {
+      justify-content: flex-start;
+
+      & h2 {
+        font-size: 16px;
+      }
+
+      & p {
+        font-size: 14px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+const { name, img, tooltip, href } = Astro.props;
+---
+
+<span class="tech">
+  <span class="tooltip">
+    <img src={img} alt={`${name} logo`} />
+    <span>{tooltip}</span>
+  </span>
+
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    {name}
+  </a>
+</span>
+
+<style lang="scss">
+  .tech {
+    position: relative;
+    display: inline-block;
+
+    & a {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    & .tooltip {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      box-sizing: initial;
+      visibility: hidden;
+      position: absolute;
+      width: 400px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: var(--dark);
+      z-index: 2;
+      top: 20px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-100px);
+      text-align: left;
+
+      // tooltip img
+      & img {
+        margin: auto;
+        width: 40px;
+        aspect-ratio: 1;
+        color: var(--white); // alt text color
+      }
+
+      // tooltip text
+      & span {
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+    &:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    @media (max-width: 700px) {
+      .tooltip {
+        display: none;
+      }
+    }
+  }
+</style>
