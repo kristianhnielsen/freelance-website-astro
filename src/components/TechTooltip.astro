@@ -4,7 +4,7 @@ const { name, img, tooltip, href } = Astro.props;
 
 <span class="tech">
   <span class="tooltip">
-    <img src={img} alt={`${name} logo`} />
+    <img src={img} alt={`${name} logo`} aria-label={name} />
     <span>{tooltip}</span>
   </span>
 
