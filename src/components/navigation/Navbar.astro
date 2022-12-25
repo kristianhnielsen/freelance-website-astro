@@ -2,8 +2,8 @@
 ---
 
 <header>
-  <a href="/">
-    <img src="/assets/svg/logo.svg" alt="KN encapsulated by </>" class="logo" />
+  <a href="/" class="logo">
+    <img src="/assets/svg/logo.svg" alt="KN encapsulated by </>" />
   </a>
   <button class="hamburger" aria-expanded="false">
     <div class="bar"></div>
@@ -61,9 +61,12 @@
   }
 
   .logo {
-    height: var(--navbar-height);
-    width: calc(var(--navbar-height) * 2 - 30px);
-    margin: 0 30px;
+    & img {
+      padding: 2px;
+      height: var(--navbar-height);
+      width: calc(var(--navbar-height) * 2 - 30px);
+      margin: 0 30px;
+    }
   }
 
   nav {
