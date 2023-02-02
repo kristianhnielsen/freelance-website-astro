@@ -1,8 +1,14 @@
 ---
-const { href, primary, secondary } = Astro.props;
+interface Props {
+  href: string;
+  primary?: boolean;
+  secondary?: boolean;
+  style?: object;
+}
+const { href, primary, secondary, style } = Astro.props;
 ---
 
-<a href={href} class:list={["button", { primary, secondary }]}>
+<a href={href} class:list={["button", { primary, secondary }]} style={style}>
   <slot />
 </a>
 
@@ -11,12 +17,13 @@ const { href, primary, secondary } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
+    min-width: 130px;
     height: 50px;
     border-radius: 20px;
     transition: all 0.15s ease-in-out;
     text-decoration: none;
     font-weight: 700;
+    padding: 3px 10px;
 
     &:hover,
     &:focus {
