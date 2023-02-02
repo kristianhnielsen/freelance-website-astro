@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import BlogPostCard from "./BlogPostCard.astro";
+import { boolean } from "astro/zod";
+
+type Props = CollectionEntry<"blog">;
+
+const blogPosts = await getCollection(
+  "blog",
+  ({ data }) => data.language !== "en"
+);
+
+const sortedByNewestBlogPosts = blogPosts.sort(
+  (a, b) => b.data.published.getTime() - a.data.published.getTime()
+);
+---
+
+<Layout
+  title="Blog | Kristian Nielsen"
+  description="Kristian Nielsens blog om udvikling af hjemmesider"
+>
+  {
+    sortedByNewestBlogPosts.map((post) => (
+      <BlogPostCard
+        thumbnail={post.data.images.thumbnail}
+        title={post.data.title}
+        description={post.data.description}
+        publishingDate={post.data.published}
+        href={`/blog/${post.slug}`}
+      />
+    ))
+  }
+</Layout>

@@ -1,0 +1,122 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Button from "../../components/Button.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getDateString } from "../../utils/datetime";
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection(
+    "blog"
+    // ({ data }) => data.draft !== true
+  );
+
+  return blogPosts.map((post) => ({
+    params: { blogPost: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+const { post } = Astro.props;
+
+const { Content } = await post.render();
+---
+
+<Layout
+  title={`${post.data.title} | Kristian Nielsen Blog`}
+  description={post.data.description}
+>
+  <section class="blog-post">
+    <header>
+      <img
+        src={post.data.images.hero.src}
+        alt={post.data.images.hero.alt}
+        class="hero-image"
+      />
+      <div class="meta">
+        <h1>{post.data.title}</h1>
+        <time>
+          Udgivet {getDateString(post.data.published, post.data.language, true)}
+          {
+            post.data.updated && (
+              <span>
+                &bull; Opdateret{" "}
+                {getDateString(post.data.updated, post.data.language, true)}
+              </span>
+            )
+          }
+        </time>
+        <Button
+          href="#conclusion"
+          secondary
+          style={{
+            display: "inline-block",
+            "min-width": "0px",
+            height: "auto",
+            "margin-top": "10px",
+          }}>TL;DR</Button
+        >
+      </div>
+    </header>
+    <article class="main">
+      <Content />
+    </article>
+
+    <div class="buttons">
+      <Button href="/blog/" primary>&larr; Alle Opslag</Button>
+      <Button href="#header" secondary>Til Top &uarr;</Button>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .blog-post {
+    text-align: left;
+    padding: 0;
+    padding-bottom: 30px;
+
+    & header {
+      & .meta {
+        padding: 30px;
+
+        & time {
+          display: block;
+          font-size: 12px;
+        }
+        & a {
+          font-size: 14px;
+        }
+        @media (max-width: 700px) {
+          & h1 {
+            font-size: 26px;
+            font-weight: 800;
+          }
+        }
+      }
+
+      & .hero-image {
+        // width: 100%;
+        display: inline-block;
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    & .main {
+      display: grid;
+      padding: 30px;
+      line-height: 1.5;
+      gap: 12px;
+      margin-bottom: 100px;
+
+      @media (max-width: 700px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .buttons {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+</style>

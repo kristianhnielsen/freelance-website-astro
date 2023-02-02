@@ -11,10 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.15.1",
+    "@astrojs/sitemap": "^1.0.0",
     "@emailjs/browser": "^3.10.0",
-    "astro": "^1.6.12",
-    "astro-compress": "^1.1.24",
-    "emailjs": "^4.0.1"
+    "astro": "^2.0.2",
+    "astro-compress": "^1.1.24"
   },
   "devDependencies": {
     "sass": "^1.56.1"
