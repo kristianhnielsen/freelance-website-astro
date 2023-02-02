@@ -30,7 +30,7 @@ En hjemmeside giver små virksomheder mulighed for at nå ud til et bredere publ
 
 En af de største fordele ved at have en hjemmeside til en mindre virksomhed er evnen til at øge synlighed og nå ud til flere kunder. Med en hjemmeside kan små virksomheder udvide deres rækkevidde ud over deres umiddelbare placering og målrette mod kunder fra hele verden. Derudover tillader en hjemmeside, at små virksomheder nemt kan findes gennem søgemaskiner, hvilket gør det nemmere for kunderne at finde dem, når de leder efter produkter eller tjenester, som virksomheden tilbyder.
 
-<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2751&q=80" alt="some alt">
+<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2751&q=80" alt="network traffic graph">
 
 ## Omkostningseffektivitet
 
