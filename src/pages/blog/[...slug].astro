@@ -5,20 +5,15 @@ import Layout from "../../layouts/Layout.astro";
 import { getDateString } from "../../utils/datetime";
 
 export async function getStaticPaths() {
-  const blogPosts = await getCollection(
-    "blog"
-    // ({ data }) => data.draft !== true
-  );
-
-  return blogPosts.map((post) => ({
-    params: { blogPost: post.slug },
-    props: { post },
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
   }));
 }
-
 type Props = CollectionEntry<"blog">;
-const { post } = Astro.props;
 
+const post = Astro.props;
 const { Content } = await post.render();
 ---
 
@@ -35,15 +30,13 @@ const { Content } = await post.render();
       />
       <div class="meta">
         <h1>{post.data.title}</h1>
-        <time>
-          Udgivet {getDateString(post.data.published, post.data.language, true)}
+        <time datetime={post.data.published.toISOString()}>
           {
-            post.data.updated && (
-              <span>
-                &bull; Opdateret{" "}
-                {getDateString(post.data.updated, post.data.language, true)}
-              </span>
-            )
+            post.data.published.toLocaleDateString("da", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
           }
         </time>
         <Button

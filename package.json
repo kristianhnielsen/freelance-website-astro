@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "@example/blog",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,13 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.15.1",
-    "@astrojs/sitemap": "^1.0.0",
-    "@emailjs/browser": "^3.10.0",
-    "astro": "^2.0.2",
-    "astro-compress": "^1.1.24"
-  },
-  "devDependencies": {
-    "sass": "^1.56.1"
+    "astro": "^2.0.5",
+    "@astrojs/mdx": "^0.16.0",
+    "@astrojs/sitemap": "^1.0.1"
   }
 }

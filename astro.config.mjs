@@ -1,15 +1,10 @@
 import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
 
-// https://astro.build/config
-import compress from "astro-compress";
-
-// https://astro.build/config
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [compress(), sitemap(), mdx()],
+  site: "https://www.kristiannielsen.com",
+  integrations: [mdx(), sitemap()],
 });
