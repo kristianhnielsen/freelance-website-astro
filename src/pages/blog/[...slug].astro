@@ -2,7 +2,6 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import Button from "../../components/Button.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getDateString } from "../../utils/datetime";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -32,7 +31,7 @@ const { Content } = await post.render();
         <h1>{post.data.title}</h1>
         <time datetime={post.data.published.toISOString()}>
           {
-            post.data.published.toLocaleDateString("da", {
+            post.data.published.toLocaleDateString(post.data.language, {
               year: "numeric",
               month: "short",
               day: "numeric",
@@ -47,8 +46,10 @@ const { Content } = await post.render();
             "min-width": "0px",
             height: "auto",
             "margin-top": "10px",
-          }}>TL;DR</Button
+          }}
         >
+          TL;DR
+        </Button>
       </div>
     </header>
     <article class="main">

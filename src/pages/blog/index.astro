@@ -20,7 +20,7 @@ const posts = (await getCollection("blog"))
         <article>
           <div class="content">
             <time datetime={post.data.published.toISOString()}>
-              {post.data.published.toLocaleDateString("da", {
+              {post.data.published.toLocaleDateString(post.data.language, {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
