@@ -39,7 +39,7 @@ const { Content } = await post.render();
           }
         </time>
         <Button
-          href="#conclusion"
+          href={post.data.language == "en" ? "#conclusion" : "#konklusion"}
           secondary
           style={{
             display: "inline-block",
