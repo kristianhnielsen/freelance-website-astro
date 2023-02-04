@@ -6,24 +6,13 @@ import "../styles/global.scss";
 const { title, description } = Astro.props;
 const url = "https://kristiannielsen.com";
 const image = "/assets/img/profile.png";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="da">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78CP3Y0V4Z"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-78CP3Y0V4Z");
-    </script>
-
+    <!-- Global Metadata -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,6 +26,9 @@ const image = "/assets/img/profile.png";
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Primary Meta Tags -->
     <meta name="description" content={description} />
