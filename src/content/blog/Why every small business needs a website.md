@@ -8,13 +8,13 @@ images:
   {
     thumbnail:
       {
-        src: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2010&q=80",
+        src: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2010&q=12",
         alt: "laptop open with a website product page showing",
       },
 
     hero:
       {
-        src: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2010&q=80",
+        src: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2010&q=12",
         alt: "laptop open with a website product page showing",
       },
   }
@@ -30,7 +30,7 @@ A website allows small businesses to reach a wider audience and increase their v
 
 One of the biggest advantages of having a website for a small business is the ability to increase visibility and reach more customers. With a website, small businesses can expand their reach beyond their immediate location and target customers from all over the world. Additionally, a website allows small businesses to be found easily through search engines, making it easier for customers to find them when they are looking for products or services that the business offers.
 
-<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2751&q=80" alt="some alt">
+<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2751&q=12" alt="network traffic graph">
 
 ## Cost-Effectiveness
 
