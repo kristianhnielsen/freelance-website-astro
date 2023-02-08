@@ -6,7 +6,6 @@ import "../styles/global.scss";
 const { title, description } = Astro.props;
 const url = "https://kristiannielsen.com";
 const image = "/assets/img/profile.png";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -38,9 +37,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
 
     <!-- Primary Meta Tags -->
     <meta name="description" content={description} />
