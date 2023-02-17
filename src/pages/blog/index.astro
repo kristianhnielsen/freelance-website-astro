@@ -4,7 +4,7 @@ import { CollectionEntry, getCollection } from "astro:content";
 
 const posts = (await getCollection("blog"))
   // Sort by newest published
-  .sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf())
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
 
   // Only posts in Danish
   .filter((post) => post.data.language !== "en");
@@ -42,6 +42,7 @@ const posts = (await getCollection("blog"))
       </section>
     ))
   }
+
   <style lang="scss">
     .blog-card {
       display: grid;
@@ -120,7 +121,8 @@ const posts = (await getCollection("blog"))
       & img {
         border-radius: 10px;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        aspect-ratio: 1;
       }
     }
   </style>
