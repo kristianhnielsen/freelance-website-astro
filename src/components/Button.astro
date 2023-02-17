@@ -24,11 +24,12 @@ const { href, primary, secondary, style } = Astro.props;
     text-decoration: none;
     font-weight: 700;
     padding: 3px 10px;
+    border: 2px solid transparent;
 
     &:hover,
     &:focus {
       transform: scale(1.1);
-      border: 2px solid var(--accent-primary);
+      border-color: var(--accent-primary);
     }
 
     &:active {
@@ -41,7 +42,7 @@ const { href, primary, secondary, style } = Astro.props;
     color: var(--white);
 
     @media (max-width: 700px) {
-      border: 2px solid var(--accent-primary);
+      border-color: var(--accent-primary);
     }
   }
   .secondary {
