@@ -1,3 +1,7 @@
+---
+const today = new Date();
+---
+
 <footer>
   <h2>Navigation</h2>
   <nav>
@@ -7,7 +11,7 @@
     <a href="/blog">Blog</a>
     <a href="/contact">Kontakt</a>
   </nav>
-  <p>&copy; 2022 Kristian Hviid Nielsen</p>
+  <p>&copy; {today.getFullYear()} Kristian Hviid Nielsen</p>
 </footer>
 
 <style lang="scss">
