@@ -19,7 +19,7 @@ const { Content } = await post.render();
 <Layout
   title={`${post.data.title} | Kristian Nielsen Blog`}
   description={post.data.description}
-  socialImage={post.data.images.hero}
+  socialImage={post.data.images.hero.src}
 >
   <section class="blog-post">
     <header>
