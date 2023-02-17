@@ -87,4 +87,13 @@ section {
   & h2:not(:first-child) {
     margin-top: 40px;
   }
+
+  & code {
+    background-color: #eee;
+    border-radius: 3px;
+  }
+
+  & pre code {
+    background-color: unset;
+  }
 }
