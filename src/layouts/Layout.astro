@@ -2,6 +2,9 @@
 import Footer from "../components/navigation/Footer.astro";
 import Navbar from "../components/navigation/Navbar.astro";
 import "../styles/global.scss";
+import { t, changeLanguage } from "i18next";
+import i18next from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 const { title, description, socialImage } = Astro.props;
 const url = "https://kristiannielsen.com";
@@ -9,19 +12,9 @@ const image = socialImage ?? "/assets/img/profile.png";
 ---
 
 <!DOCTYPE html>
-<html lang="da">
+<html lang={i18next.language}>
   <head>
-    <!-- Google Analysis tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78CP3Y0V4Z"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-78CP3Y0V4Z");
-    </script>
+    <HeadHrefLangs />
 
     <!-- Global Metadata -->
     <meta charset="UTF-8" />

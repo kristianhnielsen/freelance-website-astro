@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "Kontakt | Kristian Nielsen Webudvikling",
+    "description": "Kontakt Kristian Nielsen freelance webudvikling og kom godt fra start med udviklingen af din nye hjemmeside"
+  },
+  "title": "Kontakt",
+  "subtitle": "Udfyld feldterne nedenfor, og lad os komme godt fra start!",
+  "form": {
+    "name": "Navn",
+    "email": "E-mail",
+    "message-placeholder": "Fortæl mig lidt mere her...",
+    "send": "Send"
+  },
+  "thank": {
+    "title": "Tak for din henvendelse!",
+    "paragraph": "Du vil blive kontaktet via din angivne e-mail adresse snarest muligt.",
+    "button": "Tilbage"
+  }
+}

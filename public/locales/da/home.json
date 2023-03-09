@@ -1,0 +1,17 @@
+{
+  "header": {
+    "title": "Kristian Nielsen Webudvikling",
+    "description": "Internationalt orienteret udvikler af skalérbare hjemmesider med moderne teknologier, vedligeholdelse af hjemmesider og meget mere. Kristian Nielsen er din lige linje mellem dig og internettet."
+  },
+  "title": "Kristian Nielsen",
+  "catchphrase": "Den lige linje mellem dig og internettet",
+  "subTitle": "Skalérbare hjemmesider med moderne teknologier, som tillader udbygning og funktionalitet, skræddersyet til dine behov.",
+  "projects": {
+    "title": "Udvalgte Projekter",
+    "category": {
+      "design": "Design",
+      "development": "Udvikling",
+      "hosting": "Hosting"
+    }
+  }
+}

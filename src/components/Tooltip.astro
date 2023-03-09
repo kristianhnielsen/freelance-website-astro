@@ -1,29 +1,29 @@
 ---
-const { name, img, tooltip, href } = Astro.props;
+const { name, img, tooltip } = Astro.props;
 ---
 
-<span class="tech">
-  <span class="tooltip">
+<span class="tooltip-container">
+  <span class="tooltip-box">
     <img src={img} alt={`${name} logo`} aria-label={name} />
     <span>{tooltip}</span>
   </span>
 
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    {name}
-  </a>
+  <span>{name}</span>
 </span>
 
 <style lang="scss">
-  .tech {
+  .tooltip-container {
     position: relative;
     display: inline-block;
 
-    & a {
+    & > span:last-child {
       color: var(--dark);
       font-weight: 700;
+      text-decoration: underline;
+      cursor: help;
     }
 
-    & .tooltip {
+    & .tooltip-box {
       display: grid;
       grid-template-columns: 1fr 4fr;
       box-sizing: initial;
@@ -39,6 +39,8 @@ const { name, img, tooltip, href } = Astro.props;
       transition: all 0.3s ease-in-out;
       transform: translateY(-100px);
       text-align: left;
+      border: 2px solid var(--accent-secondary);
+      pointer-events: none;
 
       // tooltip img
       & img {
@@ -56,14 +58,14 @@ const { name, img, tooltip, href } = Astro.props;
       }
     }
 
-    &:hover .tooltip {
+    &:hover .tooltip-box {
       visibility: visible;
       opacity: 1;
       transform: translateY(0px);
     }
 
     @media (max-width: 700px) {
-      .tooltip {
+      .tooltip-box {
         display: none;
       }
     }

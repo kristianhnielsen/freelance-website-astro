@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "Services | Kristian Nielsen Webudvikling",
+    "description": "Overview of services from Kristian Nielsen Web Development, Web Design, and Maintenance."
+  },
+  "title": "Services",
+  "subtitle": "Your website represent you and your business.",
+  "tech-stack": {
+    "title": "My Skills",
+    "p": {
+      "one": "The ability to learn new technologies and expand my own horizon is essential as a selftaught developer.",
+      "two": "As such, my skills cover a wide range of the spectrum between the user and the backend, with a solid foundation in frontend and web development with Javascript based technologies."
+    }
+  },
+
+  "services": {
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "It's a must that every webpage looks great on small and big screens."
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Search Engine Optimisation helps the users finding your website."
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Even websites need a fresh paint and polish once in a while."
+    },
+    "development": {
+      "title": "Web Development",
+      "description": "I develop all my websites with handpicked technologies for the best results."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "description": "All websites need to live on a computer somewhere, this is called a 'server'."
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Your website should live op to the basic standards for accessibility for all users regardless of their handicap."
+    }
+  }
+}

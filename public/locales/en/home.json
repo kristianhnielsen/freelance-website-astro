@@ -1,0 +1,17 @@
+{
+  "header": {
+    "title": "Kristian Nielsen Web Development",
+    "description": "Scaleable custom websites made with modern technologies, website maintenance, and more. Kristain Nielsen is your direct line to the internet."
+  },
+  "title": "Kristian Nielsen",
+  "catchphrase": "Your direct line to the internet",
+  "subTitle": "Scaleable websites made with modern technologies, tailormade to your needs",
+  "projects": {
+    "title": "Handpicked Projects",
+    "category": {
+      "design": "Design",
+      "development": "Development",
+      "hosting": "Hosting"
+    }
+  }
+}

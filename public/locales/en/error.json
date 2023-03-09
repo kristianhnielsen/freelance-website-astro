@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "404 | Kristian Nielsen",
+    "description": "Something went wrong - 404 error"
+  },
+
+  "title": "Oops!",
+  "p": {
+    "one": "It looks like something went wrong",
+    "two": "Please try again, or go to the home page"
+  },
+  "button": "To Home Page"
+}

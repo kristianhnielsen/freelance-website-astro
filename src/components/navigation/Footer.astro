@@ -1,17 +1,21 @@
 ---
 const today = new Date();
+import { setDefaultNamespace, t } from "i18next";
+import { localizePath } from "astro-i18next";
+
+setDefaultNamespace("common");
 ---
 
 <footer>
   <h2>Navigation</h2>
   <nav>
-    <a href="/">Forside</a>
-    <a href="/services">Services</a>
-    <a href="/about">Om</a>
-    <a href="/blog">Blog</a>
-    <a href="/contact">Kontakt</a>
+    <a href={localizePath("/")}>{t("nav.home")}</a>
+    <a href={localizePath("/services")}>{t("nav.services")}</a>
+    <a href={localizePath("/about")}>{t("nav.about")}</a>
+    <a href={localizePath("/blog")}>{t("nav.blog")}</a>
+    <a href={localizePath("/contact")}>{t("nav.contact")}</a>
   </nav>
-  <p>&copy; {today.getFullYear()} Kristian Hviid Nielsen</p>
+  <p>&copy; {today.getFullYear()} Kristian Nielsen</p>
 </footer>
 
 <style lang="scss">

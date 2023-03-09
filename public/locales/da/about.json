@@ -1,0 +1,22 @@
+{
+  "header": {
+    "title": "Om | Kristian Nielsen Webudvikling",
+    "description": "Kort beskrivelse af Kristian Nielsens evner og baggrund."
+  },
+  "title": "Om Kristian",
+  "paragraph-one": {
+    "part-one": "Jeg er en selvlært freelance udvikler med speciale i frontend og webudvikling. Jeg startede at lære programmering og webudvikling i 2020, og har prøvet kræfter med spiludvikling med",
+    "part-two": ", backend udvikling med",
+    "part-three": ", men har nu fundet mig tilrette i webudvikling med"
+  },
+  "paragraph-two": {
+    "part-one": "Bosiddende i det sydlige Kinas handelshovedstad,",
+    "part-two": ", har jeg gjort mig vigtige erfaringer med sprogkundskaber, kulturelle forskelle, og hvad der appellerer til brugere i og uden for Danmark."
+  },
+  "tooltip": {
+    "godot": "Godot Game Engine er en krydsplatform, gratis og open-source. Den er designed til at lave 2D og 3D spil til bl.a. computer, Android, og iOS.",
+    "python": "Python er et programmeringssprog til generelle formål. Python finder anvendelse i hos data analytikere, udvikling af kunstig intelligens mm. Pythons designfilosofi kendetegnes ved en høj grad af kodelæsbarhed. Python rangerer ofte som et af de mest populære programmeringssprog.",
+    "javascript": "JavaScript, ofte forkortet til JS, er et programmeringssprog som sammen med HTML og CSS, udgør kerneteknologierne for browsere, og dermed internettet udadtil. 98% af alle hjemmesider benytter JavaScript til at modificere indhold og udseende. Ikke at forveklses med programmeringssproget Java.",
+    "guangzhou": "Guangzhou er det administrative center i regionen Guangdong i Folkerepublikken Kina, og er med sine 18.676.605 indbyggere en af de største byer i Kina. Guangzhou-Foshan metropolområdet er det tredje folkerigeste storbyområde i Kina med 19.075.000 indbyggere. Guangzhou ligger på kysten mod det Sydkinesiske Hav."
+  }
+}

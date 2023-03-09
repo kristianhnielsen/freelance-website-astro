@@ -1,0 +1,36 @@
+---
+import { setDefaultNamespace, t } from "i18next";
+import Button from "./Button.astro";
+
+setDefaultNamespace("common");
+---
+
+<section class="cta">
+  <h2>{t("cta.title")}?</h2>
+  <p>{t("cta.prompt")}!</p>
+  <div class="buttons">
+    <Button href="/contact" primary>{t("nav.contact")}</Button>
+    <!-- <Button href="/services" secondary>{t("nav.services")}</Button> -->
+  </div>
+</section>
+
+<style lang="scss">
+  .cta {
+    // & .buttons {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   margin-top: 40px;
+    //   gap: 20px;
+    // }
+
+    & h2 {
+      color: var(--accent-primary);
+    }
+
+    & p {
+      color: var(--dark);
+      font-size: 20px;
+    }
+  }
+</style>

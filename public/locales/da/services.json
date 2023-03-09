@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "Ydelser | Kristian Nielsen Webudvikling",
+    "description": "Få et overblik over udvalget af Kristian Nielsens services inden for udvikling og vedligehold af hjemmesider."
+  },
+  "title": "Ydelser",
+  "subtitle": "Din hjemmeside repræsenterer dig eller din virksomhed udadtil.",
+  "tech-stack": {
+    "title": "Mine evner",
+    "p": {
+      "one": "Som selvlært web udvikler er det essentielt for mig, at udvide min horisont, lære nye teknologier, teknikker og erfaring.",
+      "two": "Mine evner favner derfor bredt på spektrummet mellem brugeren og backend, med solidt fundament i frontend og webudvikling med JavaScript-baserede teknologier."
+    }
+  },
+
+  "services": {
+    "responsive": {
+      "title": "Responsivt Design",
+      "description": "Det er essentielt for enhver hjemmeside er optimeret og ser brandgodt ud på alle skærmtyper."
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Search Engine Optimisation hjælper med at de rigtige brugere finder din hjemmeside."
+    },
+    "maintenance": {
+      "title": "Vedligeholdelse",
+      "description": "Selv hjemmesider skal nogle gange have en ny omgang maling og få slibet de skarpeste kanter."
+    },
+    "development": {
+      "title": "Webudvikling",
+      "description": "Jeg udvikler alle mine hjemmesider med håndplukkede teknologier for en optimal hjemmeside."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "description": "Alle hjemmesider skal bo et fysisk sted, også kaldet en 'server'."
+    },
+    "accessibility": {
+      "title": "Tilgængelighed",
+      "description": "Din hjemmeside bør leve op til basale standarder angående brugervenlig uanset handicap."
+    }
+  }
+}

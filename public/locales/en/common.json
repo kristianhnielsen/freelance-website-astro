@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "more": "More",
+    "navigation": "Navigation"
+  },
+  "cta": {
+    "title": "Interested",
+    "prompt": "Tell me about your project and hit the ground running"
+  }
+}

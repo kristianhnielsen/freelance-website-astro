@@ -1,8 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 import { CollectionEntry, getCollection } from "astro:content";
 import i18next, { changeLanguage, setDefaultNamespace, t } from "i18next";
-import Button from "../../components/Button.astro";
+import Button from "../../../components/Button.astro";
 
 const posts = (await getCollection("blog"))
   // Sort by newest published
@@ -11,11 +11,14 @@ const posts = (await getCollection("blog"))
   // Only posts in English
   .filter((post) => post.data.language === "en");
 
-changeLanguage("en");
+changeLanguage("da");
 setDefaultNamespace("blog");
 ---
 
-<Layout title={t("header.title")} description={t("header.description")}>
+<Layout
+  title="Blog | Kristian Nielsen"
+  description="Kristian Nielsens blog om udvikling af hjemmesider"
+>
   <section>
     <h1>{t("title")}</h1>
     {
@@ -45,7 +48,7 @@ setDefaultNamespace("blog");
                 <p>{post.data.description}</p>
               </div>
               <a href={`/blog/${post.slug}/`} class="read-button">
-                Read &rarr;
+                Læs &rarr;
               </a>
             </article>
             <img

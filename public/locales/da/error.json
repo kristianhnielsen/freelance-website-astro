@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "404 | Kristian Nielsen",
+    "description": "Noget gik galt - 404 fejl"
+  },
+
+  "title": "Ups!",
+  "p": {
+    "one": "Det ser ud som om noget gik galt",
+    "two": "Prøv venligst igen senere, eller gå til forsiden"
+  },
+  "button": "Til Forsiden"
+}

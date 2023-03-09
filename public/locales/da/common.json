@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "contact": "Kontakt",
+    "home": "Forside",
+    "about": "Om",
+    "services": "Ydelser",
+    "blog": "Blog",
+    "more": "Mere",
+    "navigation": "Navigation"
+  },
+  "cta": {
+    "title": "Interesseret",
+    "prompt": "Fortæl om dit projekt og kom godt fra start"
+  }
+}
