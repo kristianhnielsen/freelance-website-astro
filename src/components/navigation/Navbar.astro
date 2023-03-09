@@ -76,7 +76,7 @@ setDefaultNamespace("common");
       padding: 2px;
       height: var(--navbar-height);
       width: calc(var(--navbar-height) * 2 - 30px);
-      margin: 0 30px;
+      margin: 0 auto;
     }
   }
 
@@ -101,6 +101,17 @@ setDefaultNamespace("common");
     // bring nav to default position (into view) when menu is visible
     &[data-visible="true"] {
       transform: translateY(0%);
+    }
+
+    & select {
+      color: var(--dark);
+      font-size: 16px;
+      background-color: var(--white);
+      border-radius: 3px;
+      padding: 3px;
+      border-color: transparent;
+      cursor: pointer;
+      border-bottom: solid 2px var(--accent-primary);
     }
 
     & a {
@@ -162,17 +173,6 @@ setDefaultNamespace("common");
       border: none;
       position: static;
       justify-content: flex-end;
-
-      & select {
-        color: var(--dark);
-        font-size: 16px;
-        background-color: var(--white);
-        border-radius: 3px;
-        padding: 3px;
-        border-color: transparent;
-        cursor: pointer;
-        border-bottom: solid 2px var(--accent-primary);
-      }
 
       & a {
         color: var(--dark);
