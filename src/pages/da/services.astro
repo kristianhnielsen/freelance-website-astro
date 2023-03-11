@@ -132,6 +132,10 @@ setDefaultNamespace("services");
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
+
+    @media (max-width: 500px) {
+      width: auto;
+    }
   }
 
   .tech-stack {
