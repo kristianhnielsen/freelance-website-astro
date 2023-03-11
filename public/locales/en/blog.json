@@ -3,5 +3,10 @@
     "title": "Blog | Kristian Nielsen",
     "description": "Kristian Nielsen's blog about web development"
   },
-  "title": "Blog"
+  "title": "Blog",
+  "post": {
+    "all-posts": "All Posts",
+    "to-top": "To The Top",
+    "tldr": "TL;DR"
+  }
 }

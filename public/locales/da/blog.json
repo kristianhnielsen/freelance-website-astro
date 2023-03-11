@@ -5,5 +5,10 @@
   },
   "title": "Blog",
   "subtitle": "Beklager, denne side er kun tilgængelig på engelsk",
-  "button": "Gå til engelsk side"
+  "button": "Gå til engelsk side",
+  "post": {
+    "all-posts": "Alle Oplsag",
+    "to-top": "Til Top",
+    "tldr": "TL;DR"
+  }
 }

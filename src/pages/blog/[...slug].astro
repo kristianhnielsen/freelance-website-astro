@@ -1,23 +1,26 @@
 ---
+import { changeLanguage, setDefaultNamespace, t } from "i18next";
 import { CollectionEntry, getCollection } from "astro:content";
 import Button from "../../components/Button.astro";
 import Layout from "../../layouts/Layout.astro";
 
+changeLanguage("en");
+
+setDefaultNamespace("blog");
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }));
+    const posts = await getCollection("blog");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: post,
+    }));
 }
 type Props = CollectionEntry<"blog">;
-
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
 <Layout
-  title={`${post.data.title} | Kristian Nielsen Blog`}
+  title={`${post.data.title} | Kristian Nielsen's Blog`}
   description={post.data.description}
   socialImage={post.data.images.hero.src}
 >
@@ -40,7 +43,7 @@ const { Content } = await post.render();
           }
         </time>
         <Button
-          href={post.data.language == "en" ? "#conclusion" : "#konklusion"}
+          href="#conclusion"
           secondary
           style={{
             display: "inline-block",
@@ -49,7 +52,7 @@ const { Content } = await post.render();
             "margin-top": "10px",
           }}
         >
-          TL;DR
+          {t("post.tldr")}
         </Button>
       </div>
     </header>
@@ -58,8 +61,8 @@ const { Content } = await post.render();
     </article>
 
     <div class="buttons">
-      <Button href="/blog/" primary>&larr; Alle Opslag</Button>
-      <Button href="#header" secondary>Til Top &uarr;</Button>
+      <Button href="/blog/" primary>&larr; {t("post.all-posts")}</Button>
+      <Button href="#header" secondary>{t("post.to-top")} &uarr;</Button>
     </div>
   </section>
 </Layout>
@@ -99,7 +102,6 @@ const { Content } = await post.render();
     & .main {
       display: grid;
       padding: 30px;
-      line-height: 1.5;
       gap: 12px;
       margin-bottom: 100px;
 

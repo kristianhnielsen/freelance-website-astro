@@ -4,21 +4,17 @@ import { CollectionEntry, getCollection } from "astro:content";
 import i18next, { changeLanguage, setDefaultNamespace, t } from "i18next";
 import Button from "../../../components/Button.astro";
 
-const posts = (await getCollection("blog"))
-  // Sort by newest published
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
-
-  // Only posts in English
-  .filter((post) => post.data.language === "en");
-
 changeLanguage("da");
+
+const posts = (await getCollection("blog"))
+    // Sort by newest published
+    .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+    // Only posts in English
+    .filter((post) => post.data.language === "en");
 setDefaultNamespace("blog");
 ---
 
-<Layout
-  title="Blog | Kristian Nielsen"
-  description="Kristian Nielsens blog om udvikling af hjemmesider"
->
+<Layout title={t("header.title")} description={t("header.description")}>
   <section>
     <h1>{t("title")}</h1>
     {
@@ -26,11 +22,12 @@ setDefaultNamespace("blog");
       i18next.language !== "en" ? (
         <>
           <h3>{t("subtitle")}</h3>
-          <Button primary href="/blog">
+          <Button primary localizeHref={false} href="/blog">
             {t("button")}
           </Button>
         </>
       ) : (
+        // if language is EN, render blog posts
         posts.map((post) => (
           <section class="blog-card">
             <article>
@@ -48,7 +45,7 @@ setDefaultNamespace("blog");
                 <p>{post.data.description}</p>
               </div>
               <a href={`/blog/${post.slug}/`} class="read-button">
-                Læs &rarr;
+                Read &rarr;
               </a>
             </article>
             <img

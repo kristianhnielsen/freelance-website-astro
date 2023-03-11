@@ -6,7 +6,7 @@ import Code from "../components/svg/Code.astro";
 import Design from "../components/svg/Design.astro";
 import Smartphone from "../components/svg/Smartphone.astro";
 import Layout from "../layouts/Layout.astro";
-import CTA from "../components/ContactCTA.astro";
+import ContactCTA from "../components/ContactCTA.astro";
 import { changeLanguage, setDefaultNamespace, t } from "i18next";
 
 changeLanguage("en");
@@ -16,9 +16,14 @@ setDefaultNamespace("home");
 
 <Layout title={t("header.title")} description={t("header.description")}>
   <section class="hero">
-    <h1>{t("title")}</h1>
-    <h2>{t("catchphrase")}</h2>
-    <p>{t("subTitle")}</p>
+    <div class="headlines">
+      <h1>{t("title")}</h1>
+      <h2>{t("subtitle")}</h2>
+    </div>
+    <div>
+      <p>{t("p.one")}</p>
+      <p>{t("p.two")}</p>
+    </div>
     <div class="buttons">
       <Button href="/contact" primary>
         {t("nav.contact", { ns: "common" })}
@@ -62,14 +67,14 @@ setDefaultNamespace("home");
       ].join(", ")}
     />
   </section>
-  <CTA />
+  <ContactCTA />
 </Layout>
 
 <style lang="scss">
   .hero {
     align-items: center;
     text-align: center;
-    gap: 0;
+    gap: 30px;
 
     & h1 {
       font-weight: 700;
@@ -82,7 +87,6 @@ setDefaultNamespace("home");
     }
 
     & p {
-      margin: 30px 0 20px 0;
       max-width: 600px;
     }
 

@@ -4,13 +4,10 @@
     "description": "Overview of services from Kristian Nielsen Web Development, Web Design, and Maintenance."
   },
   "title": "Services",
-  "subtitle": "Your website represent you and your business.",
+  "subtitle": "I offer a wide range of services to help you making the website you envision.",
   "tech-stack": {
     "title": "My Skills",
-    "p": {
-      "one": "The ability to learn new technologies and expand my own horizon is essential as a selftaught developer.",
-      "two": "As such, my skills cover a wide range of the spectrum between the user and the backend, with a solid foundation in frontend and web development with Javascript based technologies."
-    }
+    "description": "As an experienced web developer with a passion for learning and staying up-to-date with the latest advancements in web technologies, I have acquired a diverse set of skills that span across the entire spectrum of website development."
   },
 
   "services": {

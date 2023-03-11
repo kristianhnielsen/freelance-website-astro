@@ -1,22 +1,22 @@
 {
   "header": {
-    "title": "Om | Kristian Nielsen Webudvikling",
-    "description": "Kort beskrivelse af Kristian Nielsens evner og baggrund."
+    "title": "About | Kristian Nielsen Web Development",
+    "description": "Short description of Kristian Nielsen's skills and bagground."
   },
   "title": "About Kristian",
   "paragraph-one": {
-    "part-one": "I'm a selftaught developer specialising in frontend and web development. I started learning programming and web development in 2020, and have played around with game development with",
+    "part-one": "I am a self-taught developer with expertise in frontend and web development. My programming journey began in 2020, and I have since gained experience in game development using",
     "part-two": ", backend development with",
-    "part-three": ", but now I've found a true passion in web development with"
+    "part-three": ".  However, my true passion and expertise now lies in web development with "
   },
   "paragraph-two": {
-    "part-one": "Residing in the southern Chinese trade capital of",
-    "part-two": ", I have gained valuable experience with language, cultural differences, and what appeals to users inside and outside of Denmark."
+    "part-one": "Having lived in the bustling trade hub of ",
+    "part-two": " for the past decade, I have developed a deep understanding of both the Chinese culture and the needs of users in the western world. This has allowed me to effectively bridge the gap between different cultures, creating websites that appeal to users both inside and outside of China. My experience has given me a unique perspective on how to design and develop websites that are culturally sensitive and user-friendly, ensuring that businesses can successfully expand their online presence across borders."
   },
   "tooltip": {
     "godot": "The Godot Game Engine is a cross-platform, free, and open-source software. It is designed to create 2D and 3D games for computers, Android, and iOS, among others.",
     "python": "Python is a general-purpose programming language used by data analysts, artificial intelligence developers, and more. Python's design philosophy is characterized by a high degree of code readability. Python is often ranked as one of the most popular programming languages.",
     "javascript": "JavaScript, often abbreviated as JS, is a programming language that, along with HTML and CSS, constitutes the core technologies of browsers and thus the internet outwardly. 98% of all websites use JavaScript to modify content and appearance. It should not be confused with the programming language Java.",
-    "guangzhou": "Guangzhou is the administrative center of the Guangdong region in the People's Republic of China, and with its 18,676,605 inhabitants, it is one of the largest cities in China. The Guangzhou-Foshan metropolitan area is the third most populous urban area in China with 19,075,000 inhabitants. Guangzhou is located on the coast facing the South China Sea."
+    "guangzhou": "Guangzhou is the administrative center of the Guangdong region in the People's Republic of China, and with its 18 million inhabitants, it is one of the largest cities in China. Guanghzou also biannually hosts Canton Fair, the largest and most comprehensive trade fair in China. Guangzhou is located on the coast facing the South China Sea."
   }
 }

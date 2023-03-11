@@ -1,11 +1,14 @@
 {
   "header": {
     "title": "Kristian Nielsen Web Development",
-    "description": "Scaleable custom websites made with modern technologies, website maintenance, and more. Kristain Nielsen is your direct line to the internet."
+    "description": "I build websites made with modern technologies, tailored to your needs, and optimized for performance. Let me help you bring your vision online."
   },
   "title": "Kristian Nielsen",
-  "catchphrase": "Your direct line to the internet",
-  "subTitle": "Scaleable websites made with modern technologies, tailormade to your needs",
+  "subtitle": "Your Website, Your Way",
+  "p": {
+    "one": "Let me help you bring your vision online!",
+    "two": "I build websites made with modern technologies, tailored to your needs, and optimized for performance."
+  },
   "projects": {
     "title": "Handpicked Projects",
     "category": {

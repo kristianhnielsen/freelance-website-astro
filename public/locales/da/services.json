@@ -1,16 +1,13 @@
 {
   "header": {
     "title": "Ydelser | Kristian Nielsen Webudvikling",
-    "description": "Få et overblik over udvalget af Kristian Nielsens services inden for udvikling og vedligehold af hjemmesider."
+    "description": "Få et overblik over udvalget af Kristian Nielsens ydelser inden for udvikling og vedligehold af hjemmesider."
   },
   "title": "Ydelser",
   "subtitle": "Din hjemmeside repræsenterer dig eller din virksomhed udadtil.",
   "tech-stack": {
     "title": "Mine evner",
-    "p": {
-      "one": "Som selvlært web udvikler er det essentielt for mig, at udvide min horisont, lære nye teknologier, teknikker og erfaring.",
-      "two": "Mine evner favner derfor bredt på spektrummet mellem brugeren og backend, med solidt fundament i frontend og webudvikling med JavaScript-baserede teknologier."
-    }
+    "description": "Som erfaren webudvikler med en passion for at lære og holde mig opdateret med alt inden for webteknologier, har jeg erfaring der spænder over hele spektret af hjemmesideudvikling."
   },
 
   "services": {

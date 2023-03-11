@@ -5,18 +5,18 @@
   },
   "title": "Om Kristian",
   "paragraph-one": {
-    "part-one": "Jeg er en selvlært freelance udvikler med speciale i frontend og webudvikling. Jeg startede at lære programmering og webudvikling i 2020, og har prøvet kræfter med spiludvikling med",
-    "part-two": ", backend udvikling med",
-    "part-three": ", men har nu fundet mig tilrette i webudvikling med"
+    "part-one": "Jeg er en selvlært udvikler med ekspertise inden for frontend- og webudvikling. Min programmeringsrejse begyndte i 2020, og siden da har jeg prøvet kræfter med spiludvikling med",
+    "part-two": ", backend-udvikling med",
+    "part-three": ". Men min passion og ekspertise ligger nu inden for webudvikling med "
   },
   "paragraph-two": {
-    "part-one": "Bosiddende i det sydlige Kinas handelshovedstad,",
-    "part-two": ", har jeg gjort mig vigtige erfaringer med sprogkundskaber, kulturelle forskelle, og hvad der appellerer til brugere i og uden for Danmark."
+    "part-one": "Efter at have boet i det travle handelscentrum ",
+    "part-two": " i det seneste årti, har jeg udviklet en forståelse for både den kinesiske kultur og sprog. Dette har gjort det muligt for mig effektivt at bygge bro mellem forskellige kulturer og skabe hjemmesider, der appellerer til brugere både i Vesten og i Kina. Min erfaring har givet mig et unikt perspektiv på, hvordan man designer og udvikler hjemmesider, der overholder de kulturelle normer, er brugervenlige, og samtidig sikrer at virksomheder kan udvide deres online tilstedeværelse på tværs af grænserne."
   },
   "tooltip": {
     "godot": "Godot Game Engine er en krydsplatform, gratis og open-source. Den er designed til at lave 2D og 3D spil til bl.a. computer, Android, og iOS.",
     "python": "Python er et programmeringssprog til generelle formål. Python finder anvendelse i hos data analytikere, udvikling af kunstig intelligens mm. Pythons designfilosofi kendetegnes ved en høj grad af kodelæsbarhed. Python rangerer ofte som et af de mest populære programmeringssprog.",
     "javascript": "JavaScript, ofte forkortet til JS, er et programmeringssprog som sammen med HTML og CSS, udgør kerneteknologierne for browsere, og dermed internettet udadtil. 98% af alle hjemmesider benytter JavaScript til at modificere indhold og udseende. Ikke at forveklses med programmeringssproget Java.",
-    "guangzhou": "Guangzhou er det administrative center i regionen Guangdong i Folkerepublikken Kina, og er med sine 18.676.605 indbyggere en af de største byer i Kina. Guangzhou-Foshan metropolområdet er det tredje folkerigeste storbyområde i Kina med 19.075.000 indbyggere. Guangzhou ligger på kysten mod det Sydkinesiske Hav."
+    "guangzhou": "Guangzhou er det administrative centrum for Guangdong-provinsen i Kina, og med sine 18 millioner indbyggere er det en af de største byer i Kina. Guanghzou er også vært for Canton Fair, den største og mest omfattende handelsmesse i Kina. Guangzhou ligger ved kysten og vender mod Sydkinesiske Hav."
   }
 }

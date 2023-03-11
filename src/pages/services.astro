@@ -9,8 +9,7 @@ import Accessibility from "../components/svg/Accessibility.astro";
 import Design from "../components/svg/Design.astro";
 import Server from "../components/svg/Server.astro";
 import TechExtLink from "../components/TechExtLink.astro";
-import Button from "../components/Button.astro";
-import CTA from "../components/ContactCTA.astro";
+import ContactCTA from "../components/ContactCTA.astro";
 
 changeLanguage("en");
 
@@ -63,8 +62,7 @@ setDefaultNamespace("services");
 
   <section class="tech-stack">
     <h2>{t("tech-stack.title")}</h2>
-    <p>{t("tech-stack.p.one")}</p>
-    <p>{t("tech-stack.p.two")}</p>
+    <p>{t("tech-stack.description")}</p>
     <div class="technologies">
       <TechExtLink
         name="HTML 5"
@@ -124,7 +122,7 @@ setDefaultNamespace("services");
     </div>
   </section>
 
-  <CTA />
+  <ContactCTA />
 </Layout>
 
 <style lang="scss">
