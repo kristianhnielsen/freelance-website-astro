@@ -1,14 +1,21 @@
 ---
+import { localizePath } from "astro-i18next";
 interface Props {
   href: string;
+  localizeHref?: boolean;
   primary?: boolean;
   secondary?: boolean;
   style?: object;
 }
-const { href, primary, secondary, style } = Astro.props;
+const { href, primary, secondary, style, localizeHref = true } = Astro.props;
 ---
 
-<a href={href} class:list={["button", { primary, secondary }]} style={style}>
+<!-- button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/cn/contact" etc. when needed -->
+<a
+  href={localizeHref ? localizePath(href) : href}
+  class:list={["button", { primary, secondary }]}
+  style={style}
+>
   <slot />
 </a>
 
