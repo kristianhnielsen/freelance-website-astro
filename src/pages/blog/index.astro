@@ -116,17 +116,18 @@ setDefaultNamespace("blog");
       & .read-button {
         font-size: 18px;
         font-weight: 700;
-        padding: 20px;
-        padding-left: 0;
+        width: fit-content;
+        margin: 20px;
+        margin-left: 0;
 
         @media (max-width: 700px) {
-          padding: 0;
+          margin: 0;
           font-size: 22px;
           font-weight: 900;
         }
 
         &:is(:hover, :focus-within) {
-          transform: translateX(20%);
+          transform: translateX(15px);
         }
       }
 

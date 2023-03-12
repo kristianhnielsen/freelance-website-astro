@@ -89,12 +89,8 @@ section {
     margin-top: 40px;
   }
 
-  & code {
-    background-color: #eee;
-    border-radius: 3px;
-  }
-
-  & pre code {
-    background-color: unset;
+  & pre {
+    border-radius: 5px;
+    padding: 15px;
   }
 }
