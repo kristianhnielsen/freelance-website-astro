@@ -1,9 +1,9 @@
 ---
-title: "Why Every Small Business Needs a Website"
+title: "Why Every Small Business Needs A Website"
 description: Discover the advantages of having a website for small businesses including increased visibility, cost-effectiveness, and customer convenience. Learn why investing in a website is crucial for staying competitive in today's market.
 published: 2023-02-02
 language: "en"
-author: Kristian Hviid Nielsen
+author: Kristian Nielsen
 images:
   {
     thumbnail:
