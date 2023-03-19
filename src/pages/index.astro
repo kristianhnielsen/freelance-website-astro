@@ -16,22 +16,25 @@ setDefaultNamespace("home");
 
 <Layout title={t("header.title")} description={t("header.description")}>
   <section class="hero">
-    <div class="headlines">
-      <h1>{t("title")}</h1>
-      <h2>{t("subtitle")}</h2>
+    <div class="content">
+      <div class="headlines">
+        <h1>{t("title")}</h1>
+        <h2>{t("subtitle")}</h2>
+      </div>
+      <div>
+        <p>{t("p.one")}</p>
+        <p>{t("p.two")}</p>
+      </div>
+      <div class="buttons">
+        <Button href="/contact" arrow={true} primary>
+          {t("cta-buttons.primary")}
+        </Button>
+        <Button href="/services" secondary>
+          {t("nav.services", { ns: "common" })}
+        </Button>
+      </div>
     </div>
-    <div>
-      <p>{t("p.one")}</p>
-      <p>{t("p.two")}</p>
-    </div>
-    <div class="buttons">
-      <Button href="/contact" primary>
-        {t("nav.contact", { ns: "common" })}
-      </Button>
-      <Button href="/services" secondary>
-        {t("nav.services", { ns: "common" })}
-      </Button>
-    </div>
+    <img loading="eager" src="./assets/img/profile.png" alt="" />
   </section>
 
   <section class="services">
@@ -72,9 +75,22 @@ setDefaultNamespace("home");
 
 <style lang="scss">
   .hero {
-    align-items: center;
-    text-align: center;
+    // align-items: center;
+    text-align: left;
     gap: 30px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    & img {
+      max-width: 100%;
+      justify-self: center;
+    }
 
     & h1 {
       font-weight: 700;
@@ -88,15 +104,24 @@ setDefaultNamespace("home");
 
     & p {
       max-width: 600px;
+      color: var(--grey);
     }
 
     @media (max-width: 700px) {
+      & {
+        grid-template-columns: 1fr;
+      }
+
+      & img {
+        max-width: min(300px, 100%);
+      }
+
       & h1 {
         font-size: 32px;
         font-weight: 900;
       }
       & h2 {
-        font-size: 14px;
+        font-size: 20px;
       }
     }
   }
@@ -129,9 +154,12 @@ setDefaultNamespace("home");
   // General container with more than one button
   .buttons {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin-top: 40px;
     gap: 20px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 </style>

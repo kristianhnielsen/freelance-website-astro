@@ -9,6 +9,9 @@
     "one": "Let me help you bring your vision online!",
     "two": "I build websites made with modern technologies, tailored to your needs, and optimized for performance."
   },
+  "cta-buttons": {
+    "primary": "Get free consultation"
+  },
   "projects": {
     "title": "Handpicked Projects",
     "category": {
