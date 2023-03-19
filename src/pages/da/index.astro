@@ -3,7 +3,7 @@ import Button from "../../components/Button.astro";
 import Project from "../../components/Project.astro";
 import Service from "../../components/Service.astro";
 import Code from "../../components/svg/Code.astro";
-import Design from "../../components/svg/Design.astro";
+import Paintbrush from "../../components/svg/Paintbrush.astro";
 import Smartphone from "../../components/svg/Smartphone.astro";
 import Layout from "../../layouts/Layout.astro";
 import ContactCTA from "../../components/ContactCTA.astro";
@@ -43,8 +43,8 @@ setDefaultNamespace("home");
       <Service header={t("services.development.title", { ns: "services" })}>
         <Code />
       </Service>
-      <Service header={t("services.maintenance.title", { ns: "services" })}>
-        <Design />
+      <Service header={t("services.design.title", { ns: "services" })}>
+        <Paintbrush />
       </Service>
       <Service header={t("services.responsive.title", { ns: "services" })}>
         <Smartphone />
@@ -129,7 +129,7 @@ setDefaultNamespace("home");
   .services {
     & .service-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       width: 100%;
       justify-items: center;
       gap: 30px;

@@ -13,11 +13,11 @@
   "services": {
     "responsive": {
       "title": "Responsivt Design",
-      "description": "Det er essentielt for enhver hjemmeside er optimeret og ser brandgodt ud på alle skærmtyper."
+      "description": "Sikre at din hjemmeside ser brandgodt ud på alle skærmtyper."
     },
     "seo": {
       "title": "SEO",
-      "description": "Search Engine Optimisation hjælper med at de rigtige brugere finder din hjemmeside."
+      "description": "Hjælper brugerne med at finde din hjemmeside."
     },
     "maintenance": {
       "title": "Vedligeholdelse",
@@ -25,15 +25,15 @@
     },
     "development": {
       "title": "Webudvikling",
-      "description": "Jeg udvikler alle mine hjemmesider med håndplukkede teknologier for en optimal hjemmeside."
-    },
-    "hosting": {
-      "title": "Hosting",
-      "description": "Alle hjemmesider skal bo et fysisk sted, også kaldet en 'server'."
+      "description": "Skabe og programmere hjemmesider."
     },
     "accessibility": {
       "title": "Tilgængelighed",
-      "description": "Din hjemmeside bør leve op til basale standarder angående brugervenlig uanset handicap."
+      "description": "Sikre at din hjemmeside kan bruges af alle brugere uanset handicap."
+    },
+    "design": {
+      "title": "Webdesign",
+      "description": "Planlægning af flotte og brugervenlige hjemmesider."
     }
   }
 }

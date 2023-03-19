@@ -13,11 +13,11 @@
   "services": {
     "responsive": {
       "title": "Responsive Design",
-      "description": "It's a must that every webpage looks great on small and big screens."
+      "description": "Making sure your website looks great on small and big screens."
     },
     "seo": {
-      "title": "SEO",
-      "description": "Search Engine Optimisation helps the users finding your website."
+      "title": "Search Engine Optimization",
+      "description": "Helps the users finding your website."
     },
     "maintenance": {
       "title": "Maintenance",
@@ -25,15 +25,15 @@
     },
     "development": {
       "title": "Web Development",
-      "description": "I develop all my websites with handpicked technologies for the best results."
-    },
-    "hosting": {
-      "title": "Hosting",
-      "description": "All websites need to live on a computer somewhere, this is called a 'server'."
+      "description": "Creating and programming custom websites."
     },
     "accessibility": {
       "title": "Accessibility",
-      "description": "Your website should live op to the basic standards for accessibility for all users regardless of their handicap."
+      "description": "Making sure your website can be used by all users regardless of handicap."
+    },
+    "design": {
+      "title": "Web Design",
+      "description": "Planning a beautiful and user-friendly website."
     }
   }
 }

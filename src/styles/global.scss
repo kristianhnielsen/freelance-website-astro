@@ -70,6 +70,11 @@ img {
   }
 }
 
+// for SVGs requiring fill instead of stroke
+.fill path {
+  fill: var(--accent-secondary);
+}
+
 section {
   background-color: var(--white);
   padding: 30px;

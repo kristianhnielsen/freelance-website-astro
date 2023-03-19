@@ -6,10 +6,10 @@ import Service from "../../components/Service.astro";
 import Smartphone from "../../components/svg/Smartphone.astro";
 import Eye from "../../components/svg/Eye.astro";
 import Accessibility from "../../components/svg/Accessibility.astro";
-import Design from "../../components/svg/Design.astro";
-import Server from "../../components/svg/Server.astro";
+import Pencil from "../../components/svg/Pencil.astro";
 import TechExtLink from "../../components/TechExtLink.astro";
 import ContactCTA from "../../components/ContactCTA.astro";
+import Paintbrush from "../../components/svg/Paintbrush.astro";
 
 changeLanguage("da");
 
@@ -26,6 +26,12 @@ setDefaultNamespace("services");
         header={t("services.development.title")}
       >
         <Code />
+      </Service>
+      <Service
+        description={t("services.design.description")}
+        header={t("services.design.title")}
+      >
+        <Paintbrush />
       </Service>
       <Service
         description={t("services.responsive.description")}
@@ -49,13 +55,7 @@ setDefaultNamespace("services");
         description={t("services.maintenance.description")}
         header={t("services.maintenance.title")}
       >
-        <Design />
-      </Service>
-      <Service
-        description={t("services.hosting.description")}
-        header={t("services.hosting.title")}
-      >
-        <Server />
+        <Pencil />
       </Service>
     </div>
   </section>
