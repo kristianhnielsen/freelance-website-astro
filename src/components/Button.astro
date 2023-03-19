@@ -6,8 +6,16 @@ interface Props {
   primary?: boolean;
   secondary?: boolean;
   style?: object;
+  arrow?: boolean;
 }
-const { href, primary, secondary, style, localizeHref = true } = Astro.props;
+const {
+  href,
+  primary,
+  secondary,
+  style,
+  arrow,
+  localizeHref = true,
+} = Astro.props;
 ---
 
 <!-- button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/cn/contact" etc. when needed -->
@@ -17,6 +25,7 @@ const { href, primary, secondary, style, localizeHref = true } = Astro.props;
   style={style}
 >
   <slot />
+  {arrow && <>&rarr;</>}
 </a>
 
 <style lang="scss">
