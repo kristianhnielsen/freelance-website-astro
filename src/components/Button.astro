@@ -16,9 +16,10 @@ const {
   arrow,
   localizeHref = true,
 } = Astro.props;
+
+// button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/cn/contact" etc. when needed
 ---
 
-<!-- button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/cn/contact" etc. when needed -->
 <a
   href={localizeHref ? localizePath(href) : href}
   class:list={["button", { primary, secondary }]}
