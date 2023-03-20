@@ -14,19 +14,19 @@ const { description, header } = Astro.props;
   .service {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    color: var(--accennt-primary);
+    color: var(--accent-primary);
     background-color: var(--white);
     box-shadow: var(--shadow);
     border-radius: 5px;
     padding: 15px;
     gap: 15px;
+    width: 260px;
 
     @media (max-width: 700px) {
       padding: 10px;
     }
 
     & h2 {
-      color: var(--accent-primary);
       font-size: 18px;
     }
 
