@@ -52,7 +52,11 @@ setDefaultNamespace("home");
     </div>
     <div class="buttons">
       <Button href="/services" primary>
-        {t("nav.more", { ns: "common" })}
+        {
+          `${t("nav.more", { ns: "common" })} ${t("nav.services", {
+            ns: "common",
+          })}`
+        }
       </Button>
     </div>
   </section>
