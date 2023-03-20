@@ -5,6 +5,7 @@ import "../styles/global.scss";
 import { t, changeLanguage } from "i18next";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
+import GA from "../components/analytics/GA.astro";
 
 const { title, description, socialImage } = Astro.props;
 const url = "https://kristiannielsen.com";
@@ -14,6 +15,7 @@ const image = socialImage ?? "/assets/img/profile.png";
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
+    <GA />
     <HeadHrefLangs />
 
     <!-- Global Metadata -->
