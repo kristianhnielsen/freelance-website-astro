@@ -1,0 +1,140 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import i18next, { changeLanguage, setDefaultNamespace, t } from "i18next";
+import Button from "../../../components/Button.astro";
+
+changeLanguage("zh");
+
+const posts = (await getCollection("blog"))
+    // Sort by newest published
+    .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+    // Only posts in English
+    .filter((post) => post.data.language === "en");
+setDefaultNamespace("blog");
+---
+
+<Layout title={t("header.title")} description={t("header.description")}>
+  <section>
+    <h1>{t("title")}</h1>
+    {
+      // if language is not EN then show direction to EN blog page
+      i18next.language !== "en" ? (
+        <>
+          <h3>{t("subtitle")}</h3>
+          <Button primary localizeHref={false} href="/blog">
+            {t("button")}
+          </Button>
+        </>
+      ) : (
+        // if language is EN, render blog posts
+        posts.map((post) => (
+          <section class="blog-card">
+            <article>
+              <div class="content">
+                <time datetime={post.data.published.toISOString()}>
+                  {post.data.published.toLocaleDateString(post.data.language, {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </time>
+                <h2>
+                  <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                </h2>
+                <p>{post.data.description}</p>
+              </div>
+              <a href={`/blog/${post.slug}/`} class="read-button">
+                Read &rarr;
+              </a>
+            </article>
+            <img
+              src={post.data.images.thumbnail.src}
+              alt={post.data.images.thumbnail.alt}
+            />
+          </section>
+        ))
+      )
+    }
+  </section>
+
+  <style lang="scss">
+    .blog-card {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+
+        & img {
+          justify-self: center;
+        }
+      }
+
+      & article {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 20px;
+        margin-right: 50px;
+
+        @media (max-width: 700px) {
+          margin-right: 0;
+        }
+
+        & .content {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+        }
+      }
+
+      & .content p:last-of-type {
+        font-size: 14px;
+        color: var(--lightdark);
+
+        @media (max-width: 700px) {
+          font-size: 16px;
+        }
+      }
+
+      & .publishing-date {
+        font-size: 14px;
+        color: var(--grey);
+      }
+
+      & a {
+        text-decoration: none;
+        color: var(--dark);
+        transition: all 0.2s ease-out;
+
+        &:is(:hover, :focus-within) {
+          color: var(--accent-secondary);
+        }
+      }
+
+      & .read-button {
+        font-size: 18px;
+        font-weight: 700;
+        width: fit-content;
+        margin: 20px;
+        margin-left: 0;
+
+        @media (max-width: 700px) {
+          margin: 0;
+          font-size: 22px;
+          font-weight: 900;
+        }
+
+        &:is(:hover, :focus-within) {
+          transform: translateX(15px);
+        }
+      }
+
+      & img {
+        border-radius: 10px;
+        object-fit: contain;
+      }
+    }
+  </style>
+</Layout>

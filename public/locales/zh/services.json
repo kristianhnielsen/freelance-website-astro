@@ -1,0 +1,39 @@
+{
+  "header": {
+    "title": "服务 | Kristian Nielsen 网页开发",
+    "description": " Kristian Nielsen 网页开发、网页设计和维护的服务概览."
+  },
+  "title": "服务概览",
+  "subtitle": "可选各种服务来设计制作您理想中的网站。",
+  "tech-stack": {
+    "title": "擅长领域",
+    "description": "如果你有偏好或者特定要求，你亦可以自由选择以下的任何技术或语言。"
+  },
+
+  "services": {
+    "responsive": {
+      "title": "自适应网页设计",
+      "description": "从电脑到手机屏幕，网页都应该赏心悦目。"
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "通过搜索引擎优化，帮助用户找到您的网站。"
+    },
+    "maintenance": {
+      "title": "技术维护",
+      "description": "网站也需要时不时的更新和润色。"
+    },
+    "development": {
+      "title": "网页开发",
+      "description": "创建和编程富有个性的网站。"
+    },
+    "design": {
+      "title": "网页设计",
+      "description": "规划美观且用户友好的网站。"
+    },
+    "accessibility": {
+      "title": "辅助功能",
+      "description": "为网站提供无障碍浏览的功能。"
+    }
+  }
+}

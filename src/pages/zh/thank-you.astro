@@ -1,0 +1,17 @@
+---
+import { setDefaultNamespace, t, changeLanguage } from "i18next";
+import Button from "../../components/Button.astro";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("zh");
+
+setDefaultNamespace("contact");
+---
+
+<Layout title={t("header.title")} description={t("header.description")}>
+  <section>
+    <h1>{t("thank.title")}</h1>
+    <p>{t("thank.paragraph")}</p>
+    <Button href="/" primary>{t("thank.button")}</Button>
+  </section>
+</Layout>

@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "404 | Kristian Nielsen",
+    "description": "出了点问题 - 404 错误"
+  },
+
+  "title": "哎呀！",
+  "p": {
+    "one": "好像出了点问题",
+    "two": "请重试，或返回主页"
+  },
+  "button": "回主页"
+}

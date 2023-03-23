@@ -1,0 +1,126 @@
+---
+import { changeLanguage, setDefaultNamespace, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import { localizeUrl } from "astro-i18next";
+
+changeLanguage("zh");
+
+setDefaultNamespace("contact");
+---
+
+<Layout title={t("header.title")} description={t("header.description")}>
+  <section>
+    <div>
+      <h1>{t("title")}</h1>
+      <h2>{t("subtitle")}</h2>
+    </div>
+    <form
+      action="https://formsubmit.co/kristianhnielsen@protonmail.com"
+      method="POST"
+    >
+      <input
+        type="hidden"
+        name="_next"
+        value={localizeUrl("http://kristiannielsen.com/thank-you")}
+      />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="basic" />
+      <input type="hidden" name="_subject" value="New submission!" />
+      <input type="text" name="_honey" style="display:none" />
+      <label for="name">
+        {t("form.name")}
+        <input
+          type="text"
+          pattern=".+"
+          placeholder="John Schmidt"
+          name="name"
+          required
+        />
+      </label>
+      <label for="email">
+        {t("form.email")}
+        <input
+          type="email"
+          name="email"
+          placeholder="john@example.com"
+          id="email"
+          required
+          pattern=".+@.+\..+"
+        />
+      </label>
+      <textarea
+        name="message"
+        cols="40"
+        rows="10"
+        placeholder={t("form.message-placeholder")}></textarea>
+
+      <button type="submit">{t("form.send")}</button>
+    </form>
+  </section>
+</Layout>
+
+<style lang="scss">
+  h2 {
+    font-size: 14px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+
+      & input {
+        padding: 10px;
+        border: var(--dark) 3px solid;
+        border-radius: 10px;
+
+        // State for input elements
+        &:required {
+          &:invalid {
+            border-color: var(--accent-primary);
+          }
+          &:valid {
+            border-color: var(--accent-secondary);
+          }
+        }
+      }
+    }
+
+    & textarea {
+      padding: 5px;
+      font-family: inherit;
+      resize: vertical;
+      font-size: 12px;
+    }
+
+    & button {
+      padding: 15px 40px;
+      width: fit-content;
+      background-color: var(--dark);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      box-shadow: var(--shadow);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.1s ease-out;
+      align-self: flex-start;
+
+      &:hover {
+        border: 2px solid var(--accent-primary);
+      }
+
+      @media (max-width: 700px) {
+        align-self: center;
+      }
+    }
+  }
+</style>

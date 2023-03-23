@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "contact": "联系方式",
+    "home": "主页",
+    "about": "关于",
+    "services": "合作详情",
+    "blog": "博客",
+    "more": "更多",
+    "navigation": "导航"
+  },
+  "cta": {
+    "title": "想了解更多",
+    "prompt": "告诉我您的想法并获得免费咨询"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Kristian Nielsen 网页开发",
+    "description": "采用最新技术，根据您的需求量身定制，创建最优性能的网站。让我帮你把你的愿景放上互联网。"
+  },
+  "title": "Kristian Nielsen",
+  "subtitle": "你的网站，你做主",
+  "p": {
+    "one": "让我帮你把你的愿景放上互联网！",
+    "two": "采用最新技术，根据您的需求量身定制，创建最优性能的网站。"
+  },
+  "cta-buttons": {
+    "primary": "点击咨询"
+  },
+  "projects": {
+    "title": "精选作品",
+    "category": {
+      "design": "设计",
+      "development": "开发",
+      "hosting": "网站代管"
+    }
+  }
+}

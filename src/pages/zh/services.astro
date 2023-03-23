@@ -1,0 +1,162 @@
+---
+import { changeLanguage, setDefaultNamespace, t } from "i18next";
+import Code from "../../components/svg/Code.astro";
+import Layout from "../../layouts/Layout.astro";
+import Service from "../../components/Service.astro";
+import Smartphone from "../../components/svg/Smartphone.astro";
+import Eye from "../../components/svg/Eye.astro";
+import Accessibility from "../../components/svg/Accessibility.astro";
+import Pencil from "../../components/svg/Pencil.astro";
+import TechExtLink from "../../components/TechExtLink.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Paintbrush from "../../components/svg/Paintbrush.astro";
+
+changeLanguage("zh");
+
+setDefaultNamespace("services");
+---
+
+<Layout title={t("header.title")} description={t("header.description")}>
+  <section class="services">
+    <h1>{t("title")}</h1>
+    <p>{t("subtitle")}</p>
+    <div class="cards">
+      <Service
+        description={t("services.development.description")}
+        header={t("services.development.title")}
+      >
+        <Code />
+      </Service>
+      <Service
+        description={t("services.design.description")}
+        header={t("services.design.title")}
+      >
+        <Paintbrush />
+      </Service>
+      <Service
+        description={t("services.responsive.description")}
+        header={t("services.responsive.title")}
+      >
+        <Smartphone />
+      </Service>
+      <Service
+        description={t("services.seo.description")}
+        header={t("services.seo.title")}
+      >
+        <Eye />
+      </Service>
+      <Service
+        description={t("services.accessibility.description")}
+        header={t("services.accessibility.title")}
+      >
+        <Accessibility />
+      </Service>
+      <Service
+        description={t("services.maintenance.description")}
+        header={t("services.maintenance.title")}
+      >
+        <Pencil />
+      </Service>
+    </div>
+  </section>
+
+  <section class="tech-stack">
+    <h2>{t("tech-stack.title")}</h2>
+    <p>{t("tech-stack.description")}</p>
+    <div class="technologies">
+      <TechExtLink
+        name="HTML 5"
+        href="https://en.wikipedia.org/wiki/HTML5"
+        img="/assets/tech-icons/html.svg"
+      />
+      <TechExtLink
+        name="CSS"
+        href="https://en.wikipedia.org/wiki/CSS"
+        img="/assets/tech-icons/css.svg"
+      />
+      <TechExtLink
+        name="JavaScript"
+        href="https://en.wikipedia.org/wiki/JavaScript"
+        img="/assets/tech-icons/js.svg"
+      />
+      <TechExtLink
+        name="SASS/SCSS"
+        href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+        img="/assets/tech-icons/sass.svg"
+      />
+      <TechExtLink
+        name="ReactJS"
+        href="https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+        img="/assets/tech-icons/reactjs.svg"
+      />
+      <TechExtLink
+        name="NextJS"
+        href="https://en.wikipedia.org/wiki/Next.js"
+        img="/assets/tech-icons/nextjs.svg"
+      />
+      <TechExtLink
+        name="Astro"
+        href="http://astro.build"
+        img="/assets/tech-icons/astro.svg"
+      />
+      <TechExtLink
+        name="Tailwind CSS"
+        href="https://tailwindcss.com/"
+        img="/assets/tech-icons/tailwind.svg"
+      />
+      <TechExtLink
+        name="Styled Components"
+        href="https://styled-components.com/"
+        img="/assets/tech-icons/styled-components.svg"
+      />
+      <TechExtLink
+        name="Python"
+        href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+        img="/assets/tech-icons/python.svg"
+      />
+      <TechExtLink
+        name="Figma"
+        href="https://en.wikipedia.org/wiki/Figma_(software)"
+        img="/assets/tech-icons/figma.svg"
+      />
+    </div>
+  </section>
+
+  <ContactCTA />
+</Layout>
+
+<style lang="scss">
+  .services .cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+
+    @media (max-width: 500px) {
+      width: auto;
+    }
+  }
+
+  .tech-stack {
+    & .technologies,
+    & p {
+      text-align: left;
+      max-width: 80%;
+    }
+    & .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .services > div > h1,
+    .services > div > p,
+    .tech-stack .technologies,
+    .tech-stack p {
+      max-width: 90%;
+    }
+  }
+</style>

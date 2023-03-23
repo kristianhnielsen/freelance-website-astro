@@ -1,0 +1,14 @@
+{
+  "header": {
+    "title": "博客 | Kristian Nielsen",
+    "description": "Kristian Nielsen的网页开发博客"
+  },
+  "title": "博客",
+  "subtitle": "抱歉 ，此网页只有英文版",
+  "button": "返回英文版",
+  "post": {
+    "all-posts": "全部博文",
+    "to-top": "回到顶端",
+    "tldr": "一段话总结"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "联系我 | Kristian Nielsen 网页开发",
+    "description": " 联系 Kristian Nielsen，通过免费咨询开始您的新网站旅程 "
+  },
+  "title": "联系方式",
+  "subtitle": "填写以下信息，获得免费咨询！",
+  "form": {
+    "name": "姓名",
+    "email": "电子邮箱地址",
+    "message-placeholder": "您的想法、诉求……",
+    "send": "发送"
+  },
+  "thank": {
+    "title": "感谢您的提交！",
+    "paragraph": " 我们将尽快通过表格中提供的电子邮件地址与您联系。",
+    "button": "反馈"
+  }
+}

@@ -2,7 +2,7 @@
 
 export default {
   defaultLocale: "en",
-  locales: ["en", "da"],
+  locales: ["en", "da", "zh"],
   namespaces: [
     "common",
     "home",
