@@ -9,7 +9,7 @@ const blog = defineCollection({
     published: z.date().transform((str) => new Date(str)),
     updated: z.date().optional(),
     author: z.enum(["Kristian Nielsen"]),
-    language: z.enum(["en", "da"]),
+    language: z.enum(["en"]),
     images: z.object({
       thumbnail: z.object({
         src: z.string(),
