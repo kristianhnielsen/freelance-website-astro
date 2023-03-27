@@ -2,19 +2,20 @@
 import Footer from "../components/navigation/Footer.astro";
 import Navbar from "../components/navigation/Navbar.astro";
 import "../styles/global.scss";
-import { t, changeLanguage } from "i18next";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import GA from "../components/analytics/GA.astro";
+import GTMHead from "../components/analytics/GTMHead.astro";
+import GTMBody from "../components/analytics/GTMBody.astro";
 
 const { title, description, socialImage } = Astro.props;
-const url = "https://kristiannielsen.com";
 const image = socialImage ?? "/assets/img/profile.png";
 ---
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
+    <GTMHead />
     <GA />
     <HeadHrefLangs />
 
@@ -53,6 +54,7 @@ const image = socialImage ?? "/assets/img/profile.png";
     <meta property="twitter:image" content={image} />
   </head>
   <body>
+    <GTMBody />
     <Navbar />
     <main>
       <slot />
