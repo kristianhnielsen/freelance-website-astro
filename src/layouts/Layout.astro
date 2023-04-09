@@ -7,6 +7,7 @@ import { HeadHrefLangs } from "astro-i18next/components";
 import GA from "../components/analytics/GA.astro";
 import GTMHead from "../components/analytics/GTMHead.astro";
 import GTMBody from "../components/analytics/GTMBody.astro";
+import PlausibleAnalytics from "../components/analytics/PlausibleAnalytics.astro";
 
 const { title, description, socialImage } = Astro.props;
 const image = socialImage ?? "/assets/img/profile.png";
@@ -15,6 +16,7 @@ const image = socialImage ?? "/assets/img/profile.png";
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
+         <PlausibleAnalytics/>
     <GTMHead />
     <GA />
     <HeadHrefLangs />
