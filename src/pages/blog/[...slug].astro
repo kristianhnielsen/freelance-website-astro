@@ -8,11 +8,11 @@ changeLanguage("en");
 
 setDefaultNamespace("blog");
 export async function getStaticPaths() {
-    const posts = await getCollection("blog");
-    return posts.map((post) => ({
-        params: { slug: post.slug },
-        props: post,
-    }));
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
@@ -32,7 +32,7 @@ const { Content } = await post.render();
         class="hero-image"
       />
       <div class="meta">
-        <h1>{post.data.title}</h1>
+        <h1 id="title">{post.data.title}</h1>
         <time datetime={post.data.published.toISOString()}>
           {
             post.data.published.toLocaleDateString(post.data.language, {
@@ -62,8 +62,12 @@ const { Content } = await post.render();
     </article>
 
     <div class="buttons">
-      <Button href="/blog/" primary>&larr; {t("post.all-posts")}</Button>
-      <Button href="#header" secondary>{t("post.to-top")} &uarr;</Button>
+      <Button href="/blog/" primary>
+        &larr; {t("post.all-posts")}
+      </Button>
+      <Button href="#title" localizeHref={false} secondary>
+        {t("post.to-top")} &uarr;
+      </Button>
     </div>
   </section>
 </Layout>
@@ -94,7 +98,6 @@ const { Content } = await post.render();
       }
 
       & .hero-image {
-        // width: 100%;
         display: inline-block;
         border-radius: 8px 8px 0 0;
       }
