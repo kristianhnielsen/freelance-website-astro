@@ -7,7 +7,7 @@ interface Props {
   secondary?: boolean;
   style?: object;
   arrow?: boolean;
-  analyticsClass?: string
+  analyticsClass?: string;
 }
 const {
   href,
@@ -16,7 +16,7 @@ const {
   style,
   arrow,
   localizeHref = true,
-  analyticsClass
+  analyticsClass,
 } = Astro.props;
 
 // button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/zh/contact" etc. when needed
@@ -24,7 +24,11 @@ const {
 
 <a
   href={localizeHref ? localizePath(href) : href}
-  class:list={["button", { primary, secondary  }, analyticsClass && `plausible-event-name=${analyticsClass}`]}
+  class:list={[
+    "button",
+    { primary, secondary },
+    analyticsClass && `plausible-event-name=${analyticsClass}`,
+  ]}
   style={style}
 >
   <slot />
