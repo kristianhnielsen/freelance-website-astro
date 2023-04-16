@@ -1,5 +1,5 @@
 ---
-title: "Why You Should Not Use Google Analytics"
+title: "Why You Shouldn't Use Google Analytics"
 description: This blog post highlights concerns over Google Analytics' compliance with GDPR and user privacy. It provides alternatives to Google Analytics that are GDPR-compliant and maintain user data privacy.
 published: 2023-04-16
 language: "en"
@@ -9,13 +9,13 @@ images:
     thumbnail:
       {
         src: "https://images.unsplash.com/photo-1529612700005-e35377bf1415?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=12",
-        alt: "A sticky note that says 'Python', held by a man who is out of focus",
+        alt: "Google logo on top of a building",
       },
 
     hero:
       {
         src: "https://images.unsplash.com/photo-1529612700005-e35377bf1415?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=12",
-        alt: "A sticky note that says 'Python', held by a man who is out of focus",
+        alt: "Google logo on top of a building",
       },
   }
 ---
