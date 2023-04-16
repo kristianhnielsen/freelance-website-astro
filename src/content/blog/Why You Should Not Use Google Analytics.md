@@ -68,9 +68,9 @@ There are plenty of web analytics tools that brand themselves as compliant with 
 
 Popular privacy friendly web analytics services include:
 
-- <a href="https://plausible.io/" target="_blank" rel="noopener noreferrer">Plausible</a>
-- <a href="https://usefathom.com/" target="_blank" rel="noopener noreferrer">Fathom</a>
-- <a href="https://matomo.org/" target="_blank" rel="noopener noreferrer">Matomo</a>
+- <p><a href="https://plausible.io/" target="_blank" rel="noopener noreferrer">Plausible</a> &rarr; Easy to use and privacy-friendly Google Analytics alternative</p>
+- <p><a href="https://usefathom.com/" target="_blank" rel="noopener noreferrer">Fathom</a> &rarr; Is a Google Analytics alternative that doesn’t compromise visitor privacy for data. </p>
+- <p><a href="https://matomo.org/" target="_blank" rel="noopener noreferrer">Matomo</a> &rarr; Take back control with Matomo – a powerful web analytics platform that gives you 100% data ownership.</p>
 
 ## Conclusion
 
