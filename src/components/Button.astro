@@ -1,13 +1,14 @@
 ---
 import { localizePath } from "astro-i18next";
 interface Props {
-  href: string;
+  href?: string;
   localizeHref?: boolean;
   primary?: boolean;
   secondary?: boolean;
   style?: object;
   arrow?: boolean;
   analyticsClass?: string;
+  sendFormButton?: boolean;
 }
 const {
   href,
@@ -17,23 +18,32 @@ const {
   arrow,
   localizeHref = true,
   analyticsClass,
+  sendFormButton = false,
 } = Astro.props;
 
 // button href will be localized by default, meaning that "/contact", will become "/da/contact" & "/zh/contact" etc. when needed
 ---
 
-<a
-  href={localizeHref ? localizePath(href) : href}
-  class:list={[
-    "button",
-    { primary, secondary },
-    analyticsClass && `plausible-event-name=${analyticsClass}`,
-  ]}
-  style={style}
->
-  <slot />
-  {arrow && <>&rarr;</>}
-</a>
+{
+  sendFormButton ? (
+    <button class="button secondary submit" type="submit">
+      <slot />
+    </button>
+  ) : (
+    <a
+      href={localizeHref ? localizePath(href) : href}
+      class:list={[
+        "button",
+        { primary, secondary },
+        analyticsClass && `plausible-event-name=${analyticsClass}`,
+      ]}
+      style={style}
+    >
+      <slot />
+      {arrow && <>&rarr;</>}
+    </a>
+  )
+}
 
 <style lang="scss">
   .button {
@@ -49,12 +59,6 @@ const {
     padding: 3px 10px;
     border: 2px solid transparent;
 
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-      border-color: var(--accent-primary);
-    }
-
     &:active {
       transform: scale(0.9);
     }
@@ -64,13 +68,34 @@ const {
     background-color: var(--dark);
     color: var(--white);
 
+    &:hover,
+    &:focus {
+      background-color: var(--lightdark);
+    }
+
     @media (max-width: 700px) {
       border-color: var(--accent-primary);
     }
   }
+
   .secondary {
     background-color: var(--white);
     border: solid 2px var(--dark);
     color: var(--dark);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-secondary);
+    }
+  }
+
+  .submit {
+    font-size: 16px;
+    align-self: flex-start;
+    cursor: pointer;
+
+    @media (max-width: 700px) {
+      align-self: center;
+    }
   }
 </style>
