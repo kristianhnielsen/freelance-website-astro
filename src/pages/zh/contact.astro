@@ -2,6 +2,7 @@
 import { changeLanguage, setDefaultNamespace, t } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import { localizeUrl } from "astro-i18next";
+import Button from "../../components/Button.astro";
 
 changeLanguage("zh");
 
@@ -53,8 +54,7 @@ setDefaultNamespace("contact");
         cols="40"
         rows="10"
         placeholder={t("form.message-placeholder")}></textarea>
-
-      <button type="submit">{t("form.send")}</button>
+      <Button sendFormButton>{t("form.send")}</Button>
     </form>
   </section>
 </Layout>
@@ -98,29 +98,6 @@ setDefaultNamespace("contact");
       font-family: inherit;
       resize: vertical;
       font-size: 12px;
-    }
-
-    & button {
-      padding: 15px 40px;
-      width: fit-content;
-      background-color: var(--dark);
-      color: var(--white);
-      font-size: 16px;
-      font-weight: 700;
-      border: 2px solid transparent;
-      box-shadow: var(--shadow);
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.1s ease-out;
-      align-self: flex-start;
-
-      &:hover {
-        border: 2px solid var(--accent-primary);
-      }
-
-      @media (max-width: 700px) {
-        align-self: center;
-      }
     }
   }
 </style>

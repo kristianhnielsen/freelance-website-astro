@@ -26,11 +26,13 @@ setDefaultNamespace("home");
         <p>{t("p.two")}</p>
       </div>
       <div class="buttons">
-        <Button href="/contact" arrow={true} primary analyticsClass={"hero-cta"}>
+        <Button
+          href="/contact"
+          arrow={true}
+          primary
+          analyticsClass={"hero-cta"}
+        >
           {t("cta-buttons.primary")}
-        </Button>
-        <Button href="/services" secondary>
-          {t("nav.services", { ns: "common" })}
         </Button>
       </div>
     </div>
@@ -51,7 +53,7 @@ setDefaultNamespace("home");
       </Service>
     </div>
     <div class="buttons">
-      <Button href="/services" primary>
+      <Button href="/services" secondary>
         {
           `${t("nav.more", { ns: "common" })} ${t("nav.services", {
             ns: "common",
