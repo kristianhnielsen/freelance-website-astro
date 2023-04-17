@@ -1,8 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="200" height="200" rx="100" fill="#071229"/>
-<path d="M90.915 145H78.883L52.643 95.976L41.123 108.136V145H31.523V55.528H40.995V95.848L78.371 55.4H90.147L59.171 89.448L90.915 145ZM168.514 145.128H158.018L114.882 73.32V145H104.898V55.4H114.882L158.914 129.896V55.4H168.514V145.128Z" fill="#f6f6f6"/>
-<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
-</svg>
-
