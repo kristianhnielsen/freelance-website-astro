@@ -11,7 +11,10 @@ export default defineConfig({
     astroI18next(),
     sitemap({
       // Do not include the following paths to sitemap
-      filter: (page) => page !== "https://www.kristiannielsen.com/email/tak/",
+      filter: (page) =>
+        page !== "https://www.kristiannielsen.com/thank-you/" &&
+        page !== "https://www.kristiannielsen.com/zh/thank-you/" &&
+        page !== "https://www.kristiannielsen.com/da/thank-you/",
     }),
   ],
 });
