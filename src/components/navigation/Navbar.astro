@@ -16,11 +16,23 @@ setDefaultNamespace("common");
     <div class="bar"></div>
   </button>
   <nav data-visible="false">
-    <a href={localizePath("/")}>{t("nav.home")}</a>
-    <a href={localizePath("/services")}>{t("nav.services")}</a>
-    <a href={localizePath("/about")}>{t("nav.about")}</a>
-    <a href={localizePath("/blog")}>{t("nav.blog")}</a>
-    <a href={localizePath("/contact")}>{t("nav.contact")}</a>
+    <ul>
+      <li>
+        <a href={localizePath("/")}>{t("nav.home")}</a>
+      </li>
+      <li>
+        <a href={localizePath("/services")}>{t("nav.services")}</a>
+      </li>
+      <li>
+        <a href={localizePath("/about")}>{t("nav.about")}</a>
+      </li>
+      <li>
+        <a href={localizePath("/blog")}>{t("nav.blog")}</a>
+      </li>
+      <li>
+        <a href={localizePath("/contact")}>{t("nav.contact")}</a>
+      </li>
+    </ul>
     <LanguageSelector />
   </nav>
 </header>
@@ -96,6 +108,16 @@ setDefaultNamespace("common");
     transition: transform 0.4s ease-out;
     padding-top: calc(var(--navbar-height) + 10px);
     z-index: 3;
+
+    & ul {
+      display: flex;
+      flex-direction: inherit;
+      gap: inherit;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
 
     // bring nav to default position (into view) when menu is visible
     &[data-visible="true"] {
