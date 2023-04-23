@@ -6,9 +6,12 @@
   "title": "联系方式",
   "subtitle": "填写以下信息，获得免费咨询！",
   "form": {
-    "name": "姓名",
-    "email": "电子邮箱地址",
-    "message-placeholder": "您的想法、诉求……",
+    "name": { "label": "姓名", "placeholder": "姓名" },
+    "email": { "label": "电子邮箱地址", "placeholder": "邮箱" },
+    "message": {
+      "label": "留言",
+      "placeholder": "您的想法、诉求……"
+    },
     "send": "发送"
   },
   "thank": {

@@ -1,0 +1,91 @@
+---
+import Button from "./Button.astro";
+import { changeLanguage, setDefaultNamespace, t } from "i18next";
+import { localizeUrl } from "astro-i18next";
+
+setDefaultNamespace("contact");
+---
+
+<form
+  action="https://formsubmit.co/kristianhnielsen@protonmail.com"
+  method="POST"
+>
+  <input
+    type="hidden"
+    name="_next"
+    value={localizeUrl("http://kristiannielsen.com/thank-you")}
+  />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="basic" />
+  <input type="hidden" name="_subject" value="New submission!" />
+  <input type="text" name="_honey" style="display:none" />
+  <label for="name">
+    {t("form.name.label")}*
+    <input
+      type="text"
+      pattern=".+"
+      placeholder={t("form.name.placeholder")}
+      name="name"
+      required
+    />
+  </label>
+  <label for="email">
+    {t("form.email.label")}*
+    <input
+      type="email"
+      name="email"
+      placeholder={t("form.email.placeholder")}
+      id="email"
+      required
+      pattern=".+@.+\..+"
+    />
+  </label>
+  <label for="message">
+    {t("form.message.label")}
+    <textarea
+      name="message"
+      cols="40"
+      rows="10"
+      placeholder={t("form.message.placeholder")}></textarea>
+  </label>
+  <Button sendFormButton>{t("form.send")}</Button>
+</form>
+
+<style lang="scss">
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+
+      & input {
+        padding: 10px;
+        border: var(--dark) 3px solid;
+        border-radius: 10px;
+
+        // State for input elements
+        &:required {
+          &:invalid {
+            border-color: var(--accent-primary);
+          }
+          &:valid {
+            border-color: var(--accent-secondary);
+          }
+        }
+      }
+    }
+
+    & textarea {
+      padding: 5px;
+      font-family: inherit;
+      resize: vertical;
+      font-size: 12px;
+    }
+  }
+</style>

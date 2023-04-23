@@ -6,9 +6,12 @@
   "title": "Contact",
   "subtitle": "Fill out the fields below to get a free consultation!",
   "form": {
-    "name": "Name",
-    "email": "E-mail",
-    "message-placeholder": "Tell me more...",
+    "name": { "label": "Name", "placeholder": "Name" },
+    "email": { "label": "E-mail", "placeholder": "E-mail" },
+    "message": {
+      "label": "Message",
+      "placeholder": "Tell me more..."
+    },
     "send": "Send"
   },
   "thank": {

@@ -6,9 +6,12 @@
   "title": "Kontakt",
   "subtitle": "Udfyld feldterne nedenfor, og få en gratis konsultation!",
   "form": {
-    "name": "Navn",
-    "email": "E-mail",
-    "message-placeholder": "Fortæl mig lidt mere her...",
+    "name": { "label": "Navn", "placeholder": "Navn" },
+    "email": { "label": "E-mail", "placeholder": "E-mail" },
+    "message": {
+      "label": "Besked",
+      "placeholder": "Fortæl lidt mere..."
+    },
     "send": "Send"
   },
   "thank": {
