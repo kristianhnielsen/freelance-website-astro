@@ -7,7 +7,6 @@ import Paintbrush from "../components/svg/Paintbrush.astro";
 import Smartphone from "../components/svg/Smartphone.astro";
 import Layout from "../layouts/Layout.astro";
 import { changeLanguage, setDefaultNamespace, t } from "i18next";
-import ContactForm from "../components/ContactForm.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 
 changeLanguage("en");
@@ -73,7 +72,6 @@ setDefaultNamespace("home");
       services={[
         t("projects.category.design"),
         t("projects.category.development"),
-        t("projects.category.hosting"),
       ].join(", ")}
     />
   </section>

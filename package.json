@@ -1,7 +1,7 @@
 {
   "name": "freelance-website",
   "type": "module",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "private": true,
   "scripts": {
     "dev": "astro dev",

@@ -18,7 +18,10 @@ setDefaultNamespace("contact");
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="basic" />
   <input type="hidden" name="_subject" value="New submission!" />
-  <input type="text" name="_honey" style="display:none" />
+  <label for="_honey" style="display:none" aria-hidden="true"
+    >Honeypot
+    <input type="text" name="_honey" id="_honey" />
+  </label>
   <label for="name">
     {t("form.name.label")}*
     <input
@@ -26,6 +29,7 @@ setDefaultNamespace("contact");
       pattern=".+"
       placeholder={t("form.name.placeholder")}
       name="name"
+      id="name"
       required
     />
   </label>
@@ -44,6 +48,7 @@ setDefaultNamespace("contact");
     {t("form.message.label")}
     <textarea
       name="message"
+      id="message"
       cols="40"
       rows="10"
       placeholder={t("form.message.placeholder")}></textarea>

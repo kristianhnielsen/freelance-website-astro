@@ -15,7 +15,7 @@ setDefaultNamespace("common");
     <div class="bar"></div>
     <div class="bar"></div>
   </button>
-  <nav data-visible="false">
+  <nav data-visible="false" aria-label="navigation">
     <ul>
       <li>
         <a href={localizePath("/")}>{t("nav.home")}</a>
@@ -33,7 +33,10 @@ setDefaultNamespace("common");
         <a href={localizePath("/contact")}>{t("nav.contact")}</a>
       </li>
     </ul>
-    <LanguageSelector />
+    <div>
+      <label for="language"> Language:</label>
+      <LanguageSelector id="language" aria-label="language selector" />
+    </div>
   </nav>
 </header>
 
@@ -120,6 +123,10 @@ setDefaultNamespace("common");
     // bring nav to default position (into view) when menu is visible
     &[data-visible="true"] {
       transform: translateY(0%);
+    }
+
+    & > div label {
+      display: none;
     }
 
     & select {
