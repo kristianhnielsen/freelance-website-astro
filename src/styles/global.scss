@@ -88,6 +88,18 @@ section {
   text-align: center;
 }
 
+// adds an icon showing when a link is to an external source
+.external-link:after {
+  fill: var(--dark);
+  content: "";
+  display: inline-flex;
+  height: 10px;
+  margin-left: 4px;
+  background-image: url("./assets/svg/external-arrow.svg");
+  background-size: cover;
+  width: 10px;
+}
+
 // Styling for rendered content
 .blog-post {
   // Selector for every h2 child element EXCEPT for the FIRST h2 element
