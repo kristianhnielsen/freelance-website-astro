@@ -18,9 +18,12 @@ const pricingType = standard ? "standard" : advanced ? "advanced" : null;
   <h3>{t(`${pricingType}.name`)}</h3>
   <div class="included-services">
     {
-      t(`${pricingType}.included-services`, {
-        returnObjects: true,
-      }).map((item: any) => <p>{item}</p>)
+      Array.prototype.map.call(
+        t(`${pricingType}.included-services`, {
+          returnObjects: true,
+        }),
+        (item: any) => <p>{item}</p>
+      )
     }
   </div>
   <div class="price">
@@ -29,7 +32,9 @@ const pricingType = standard ? "standard" : advanced ? "advanced" : null;
   </div>
   <div class="example">
     <p>{t("common.example.title")}</p>
-    <p>{t("common.example.pages", { returnObjects: true }).join(", ")}</p>
+    <p>
+      {Array(t("common.example.pages", { returnObjects: true })).join(", ")}
+    </p>
     <p>
       {
         Number(t(`${pricingType}.price.base`)) +
@@ -42,15 +47,20 @@ const pricingType = standard ? "standard" : advanced ? "advanced" : null;
   <Button primary href={"/contact"}>{t("common.button")}</Button>
 
   {
-    t("common.special-offer", {
-      returnObjects: true,
-    }).length > 0 && (
+    Array(
+      t("common.special-offer", {
+        returnObjects: true,
+      })
+    ).length > 0 && (
       <div class="special-offer">
-        {t("common.special-offer", {
-          returnObjects: true,
-        }).map((line: string) => (
-          <p>{line}</p>
-        ))}
+        {Array.prototype.map.call(
+          t("common.special-offer", {
+            returnObjects: true,
+          }),
+          (line: string) => (
+            <p>{line}</p>
+          )
+        )}
       </div>
     )
   }

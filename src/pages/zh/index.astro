@@ -87,7 +87,8 @@ setDefaultNamespace("home");
     <div class="faq">
       <h2>{t("faq.title", { ns: "common" })}</h2>
       {
-        t("faq.questions", { returnObjects: true, ns: "common" }).map(
+        Array.prototype.map.call(
+          t("faq.questions", { returnObjects: true, ns: "common" }),
           (faqItem: { question: string; answers: string[] }) => (
             <FAQ question={faqItem.question} answers={faqItem.answers} />
           )
