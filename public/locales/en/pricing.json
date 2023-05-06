@@ -1,0 +1,43 @@
+{
+  "standard": {
+    "name": "Standard Website",
+    "price": {
+      "base": "400",
+      "page": "55"
+    },
+    "included-services": [
+      "Responsive Design",
+      "SEO Fundamentals",
+      "Basic Contact Form"
+    ]
+  },
+  "advanced": {
+    "name": "Advanced Website",
+    "price": {
+      "base": "650",
+      "page": "65"
+    },
+    "included-services": [
+      "Standard Website Features",
+      "+",
+      "3 Months Maintenance Retainer",
+      "Accessibility Fundamentals",
+      "Advanced Speed Optimization"
+    ]
+  },
+
+  "common": {
+    "currency": "EUR",
+    "perPageText": "Per Website Page",
+    "button": "Get This Website",
+    "example": {
+      "title": "Example 5 Page Website",
+      "pages": ["Homepage", "About", "Product", "Services", "Contact"]
+    },
+    "special-offer": [
+      "Orders Before 1st August",
+      "Get 1 Year Free",
+      "GDPR-Compliant Web Analytics"
+    ]
+  }
+}

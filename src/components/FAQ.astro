@@ -1,0 +1,53 @@
+---
+const { question, answers } = Astro.props;
+---
+
+<details>
+  <summary>{question}</summary>
+  {answers.map((answer: string) => <p>{answer}</p>)}
+</details>
+
+<style lang="scss">
+  details {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-top: 1px var(--dark) solid;
+    padding: 10px 5px;
+    color: var(--dark);
+    transition: all 0.5s ease-in-out;
+
+    &:not([open]) summary {
+      font-weight: 600;
+    }
+
+    &[open] summary {
+      font-weight: 300;
+    }
+
+    &[open] {
+    }
+
+    & p {
+      margin-left: 15px;
+      margin-bottom: 10px;
+      cursor: auto;
+    }
+
+    // Opening and closing animation
+    &[open] summary ~ * {
+      animation: open 0.3s ease-in-out;
+    }
+  }
+
+  @keyframes open {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+</style>

@@ -1,0 +1,43 @@
+{
+  "standard": {
+    "name": "Standard Hjemmeside",
+    "price": {
+      "base": "3000",
+      "page": "400"
+    },
+    "included-services": [
+      "Responsivt Design",
+      "Basis SEO",
+      "Simpelt Kontakt Skema"
+    ]
+  },
+  "advanced": {
+    "name": "Avanceret Hjemmeside",
+    "price": {
+      "base": "5000",
+      "page": "500"
+    },
+    "included-services": [
+      "Standard Hjemmeside Elementer",
+      "+",
+      "3 Mnd. Vedligeholdelse",
+      "Basis Tilgængelighed",
+      "Udvidet Hastighedsoptimisering"
+    ]
+  },
+
+  "common": {
+    "currency": "DKK",
+    "perPageText": "Per Side På Hjemmesiden",
+    "button": "Vælg Hjemmeside",
+    "example": {
+      "title": "5 Siders Hjemmeside Eksempel",
+      "pages": ["Hjem", "Om Os", "Produkter", "Services", "KontaKt"]
+    },
+    "special-offer": [
+      "Bestil Før 1. August",
+      "Få 1 Års Gratis",
+      "GDPR-Sikkert Web Analytics"
+    ]
+  }
+}

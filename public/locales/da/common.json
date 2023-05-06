@@ -11,5 +11,46 @@
   "cta": {
     "title": "Interesseret",
     "prompt": "Fortæl om din idé og få en gratis konsultation"
+  },
+  "faq": {
+    "title": "Ofte Stillede Spørgsmål",
+    "questions": [
+      {
+        "question": "Hvor lang tid tager det at færdiggøre en hjemmeside?",
+        "answers": [
+          "Det kommer helt an på kravene til den enkelte hjemmeside, men jeg sigter efter at kunne færdiggøre et design inden for 2 uger, og udviklingen af hjemmesiden inden for 3 uger.",
+          "Har du brug for at forkorte tidsrammerne, øger det slutprisen for hjemmesiden."
+        ]
+      },
+      {
+        "question": "Kan min hjemmeside have flere sprog?",
+        "answers": [
+          "Absolut! At have flere sprog tilgængelige på din hjemmeside er en fantastisk måde at nå ud til besøgende fra andre steder i verden!",
+          "Implementering af denne funktion øger slutprisen for hjemmesiden."
+        ]
+      },
+      {
+        "question": "Tilbyder do vedligeholdelse af hjemmesider?",
+        "answers": [
+          "Ja, jeg kan tilbyde vedligeholdese af indhold for statiske hjemmesider (lavet med HTML, CSS, og Javascript). Afhængigt af hvilke teknologier hjemmesiden er udviklet med, kan jeg foretage yderligere ændringer.",
+          "Kontakt mig for yderliger information.",
+          "Rabatter gives, hvis hjemmesiden er udviklet af mig."
+        ]
+      },
+      {
+        "question": "Kan jeg få funktioner som ikke er nævnt i pakkerne ovenfor?",
+        "answers": [
+          "Ja! Alle virksomheder har unikke krav og behov. Hvis der er specifikke funktioner som du ønsker, der ikke er nævnt ovenfor, kan jeg lave en pakkeløsning som passer til dine behov.",
+          "Mit mål er, at give dig en hjemmeside der opfylder alle de krav din virksomhed har. Jeg imødekommer såvidt muligt alle mine kunders ønsker.",
+          "Ræk endelig ud, og få en afklarende samtale!"
+        ]
+      },
+      {
+        "question": "Kan du tilbyde statistikker for vores hjemmeside?",
+        "answers": [
+          "Ja! Jeg kan tilbyde adgang til web analytics, som indsamler data i overensstemmelse med EU's Databeskyttelseslovgivning (GDPR)"
+        ]
+      }
+    ]
   }
 }

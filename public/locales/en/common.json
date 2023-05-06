@@ -11,5 +11,46 @@
   "cta": {
     "title": "Interested",
     "prompt": "Tell me about your idea and get a free consultation"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How long does it take to complete a website?",
+        "answers": [
+          "This highly depends on the requirements, however I strive to finish a design within 2 weeks, and development within 3 weeks.",
+          "Aiming for a shorter timeframe will add to the total cost of the website."
+        ]
+      },
+      {
+        "question": "Can my website have multiple languages?",
+        "answers": [
+          "Absolutely! Having multiple languages can be a powerful way to connect with users from different regions.",
+          "This feature will add to the total cost of the website."
+        ]
+      },
+      {
+        "question": "Do you offer website maintenance services?",
+        "answers": [
+          "Yes, I can provide content changes to any static website (made with HTML, CSS, and Javascript). Depending on the technologies used, I may be able to provide further changes.",
+          "Contact me for more information.",
+          "Discounted rates may be available if I developed the website."
+        ]
+      },
+      {
+        "question": "Can I get features not listed in the packages above?",
+        "answers": [
+          "Yes, I understand that every business has unique needs and requirements. If there are specific features that you require that are not listed in the packages above, please let me know and I can create a custom package that fits your needs and budget.",
+          "My goal is to provide you with a website that meets all of your business needs, and I'm always happy to accommodate your needs whenever possible.",
+          "Just reach out to me and I'll be more than happy to discuss the details with you!"
+        ]
+      },
+      {
+        "question": "Can you provide website analytics?",
+        "answers": [
+          "Yes! I can provide access to lightweight web analytics, which is compliant with EU's data protection laws (GDPR)."
+        ]
+      }
+    ]
   }
 }

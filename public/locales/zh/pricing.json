@@ -1,0 +1,36 @@
+{
+  "currency": "CNY",
+  "standard": {
+    "name": "基本网页",
+    "price": {
+      "base": "3000",
+      "page": "400"
+    },
+    "included-services": ["自适应网页设计", "搜索引擎基本", "简单的联系表"]
+  },
+  "advanced": {
+    "name": "高级网页",
+    "price": {
+      "base": "5000",
+      "page": "500"
+    },
+    "included-services": [
+      "基本网页",
+      "+",
+      "3个月修理保证",
+      "辅助基础功能",
+      "高级快速优化"
+    ]
+  },
+
+  "common": {
+    "currency": "CNY",
+    "perPageText": "各网页",
+    "button": "选此网页",
+    "example": {
+      "title": "例如5个网页的网站",
+      "pages": ["首页", "关于", "产品", "服务", "联系"]
+    },
+    "special-offer": ["8月1日前下单", "送1年", "符合GDPR的网络分析"]
+  }
+}

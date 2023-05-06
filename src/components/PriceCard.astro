@@ -1,0 +1,134 @@
+---
+import Button from "./Button.astro";
+import { setDefaultNamespace, t } from "i18next";
+
+interface Props {
+  standard?: boolean;
+  advanced?: boolean;
+}
+const { standard = false, advanced = false } = Astro.props as Props;
+
+setDefaultNamespace("pricing");
+
+const pricingType = standard ? "standard" : advanced ? "advanced" : null;
+---
+
+<div class="price-card">
+  <img src="/assets/svg/logo.svg" alt="asd" />
+  <h3>{t(`${pricingType}.name`)}</h3>
+  <div class="included-services">
+    {
+      t(`${pricingType}.included-services`, {
+        returnObjects: true,
+      }).map((item: any) => <p>{item}</p>)
+    }
+  </div>
+  <div class="price">
+    <p>+{t(`${pricingType}.price.page`)} {t("common.perPageText")}</p>
+    <p>{t(`${pricingType}.price.base`)}<span>{t("common.currency")}</span></p>
+  </div>
+  <div class="example">
+    <p>{t("common.example.title")}</p>
+    <p>{t("common.example.pages", { returnObjects: true }).join(", ")}</p>
+    <p>
+      {
+        Number(t(`${pricingType}.price.base`)) +
+          Number(t(`${pricingType}.price.page`)) * 5
+      }
+      {t("common.currency")}
+    </p>
+  </div>
+
+  <Button primary href={"/contact"}>{t("common.button")}</Button>
+
+  {
+    t("common.special-offer", {
+      returnObjects: true,
+    }).length > 0 && (
+      <div class="special-offer">
+        {t("common.special-offer", {
+          returnObjects: true,
+        }).map((line: string) => (
+          <p>{line}</p>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 20px;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    color: var(--dark);
+
+    & img {
+      width: 100px;
+      aspect-ratio: 1;
+    }
+
+    & h3 {
+      font-size: 26px;
+      color: var(--dark);
+    }
+
+    & .included-services {
+      display: grid;
+      gap: 15px;
+      width: 100%;
+      padding: 15px 0;
+      margin: 20px 0;
+      border-top: solid var(--grey) 1px;
+      border-bottom: solid var(--grey) 1px;
+
+      & p {
+        text-transform: capitalize;
+        font-style: italic;
+      }
+    }
+
+    & .price {
+      & p {
+        font-weight: 800;
+
+        &:last-child {
+          font-size: 70px;
+          color: var(--accent-primary);
+
+          & span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    & .example {
+      margin-bottom: 50px;
+
+      & p {
+        font-size: 12px;
+
+        &:last-child {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .special-offer {
+      background-color: var(--accent-primary);
+      color: var(--white);
+      padding: 20px 0;
+      margin-top: 20px;
+      width: calc(100% + 20px);
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+</style>

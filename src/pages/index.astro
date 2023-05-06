@@ -8,6 +8,9 @@ import Smartphone from "../components/svg/Smartphone.astro";
 import Layout from "../layouts/Layout.astro";
 import { changeLanguage, setDefaultNamespace, t } from "i18next";
 import ContactCTA from "../components/ContactCTA.astro";
+import PriceCard from "../components/PriceCard.astro";
+import FAQ from "../components/FAQ.astro";
+import { localizePath } from "astro-i18next/index";
 
 changeLanguage("en");
 
@@ -74,6 +77,24 @@ setDefaultNamespace("home");
         t("projects.category.development"),
       ].join(", ")}
     />
+  </section>
+
+  <section class="price">
+    <h2>Pricing</h2>
+    <div class="price-cards">
+      <PriceCard standard={true} />
+      <PriceCard advanced={true} />
+    </div>
+    <div class="faq">
+      <h2>{t("faq.title", { ns: "common" })}</h2>
+      {
+        t("faq.questions", { returnObjects: true, ns: "common" }).map(
+          (faqItem: { question: string; answers: string[] }) => (
+            <FAQ question={faqItem.question} answers={faqItem.answers} />
+          )
+        )
+      }
+    </div>
   </section>
   <ContactCTA />
 </Layout>
@@ -166,6 +187,38 @@ setDefaultNamespace("home");
       font-size: 20px;
     }
   }
+
+  .price {
+    & .price-cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: start;
+      gap: 30px;
+
+      @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .faq {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 30px;
+
+    @media (max-width: 800px) {
+      width: auto;
+    }
+
+    & h2 {
+      margin-bottom: 30px;
+    }
+  }
+
   // General container with more than one button
   .buttons {
     display: flex;
