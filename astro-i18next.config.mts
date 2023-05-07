@@ -11,6 +11,7 @@ export default {
     "contact",
     "error",
     "services",
+    "pricing",
   ],
   defaultNamespace: "common",
   // i18nextServer: {
