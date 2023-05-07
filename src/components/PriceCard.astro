@@ -11,7 +11,13 @@ setDefaultNamespace("pricing");
 ---
 
 <div class="price-card">
-  <img src="/assets/svg/logo.svg" alt="asd" />
+  {
+    pricingType === "standard" ? (
+      <img src="/assets/svg/one-tick.svg" alt="circle with one tick" />
+    ) : pricingType === "advanced" ? (
+      <img src="/assets/svg/three-ticks.svg" alt="circle with three ticks" />
+    ) : null
+  }
   <h3>{t(`${pricingType}.name`)}</h3>
   <div class="included-services">
     {

@@ -68,7 +68,7 @@ setDefaultNamespace("home");
   <section class="projects">
     <h2>{t("projects.title")}</h2>
     <Project
-      img="/assets/img/projects/adhd-konsulent.jpg"
+      img="/assets/projects/adhd-konsulent.jpg"
       href="https://adhd-konsulent.dk"
       name="ADHD Konsulent"
       services={[
@@ -81,8 +81,8 @@ setDefaultNamespace("home");
   <section class="price">
     <h2>Pricing</h2>
     <div class="price-cards">
-      <PriceCard standard={true} />
-      <PriceCard advanced={true} />
+      <PriceCard pricingType="standard" />
+      <PriceCard pricingType="advanced" />
     </div>
     <div class="faq">
       <h2>{t("faq.title", { ns: "common" })}</h2>
