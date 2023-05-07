@@ -2,7 +2,13 @@
 import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
-const { name, includedServices, priceBase, pricePage } = Astro.props;
+interface Props {
+  name: string;
+  includedServices: string[];
+  priceBase: string;
+  pricePage: string;
+}
+const { name, includedServices, priceBase, pricePage } = Astro.props as Props;
 
 setDefaultNamespace("pricing");
 ---
