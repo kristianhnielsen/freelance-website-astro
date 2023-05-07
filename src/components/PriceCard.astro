@@ -3,29 +3,25 @@ import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
 interface Props {
-  pricingType: string;
+  name: string;
+  includedServices: string[];
+  priceBase: string;
+  pricePage: string;
 }
-const { pricingType } = Astro.props as Props;
+const { name, includedServices, priceBase, pricePage } = Astro.props as Props;
 
 setDefaultNamespace("pricing");
 ---
 
 <div class="price-card">
   <img src="/assets/svg/logo.svg" alt="asd" />
-  <h3>{t(`${pricingType}.name`)}</h3>
+  <h3>{name}</h3>
   <div class="included-services">
-    {
-      Array.prototype.map.call(
-        t(`${pricingType}.included-services`, {
-          returnObjects: true,
-        }),
-        (item: any) => <p>{item}</p>
-      )
-    }
+    {includedServices.map((serviceItem) => <p>{serviceItem}</p>)}
   </div>
   <div class="price">
-    <p>+{t(`${pricingType}.price.page`)} {t("common.perPageText")}</p>
-    <p>{t(`${pricingType}.price.base`)}<span>{t("common.currency")}</span></p>
+    <p>+{pricePage} {t("common.perPageText")}</p>
+    <p>{priceBase}<span>{t("common.currency")}</span></p>
   </div>
   <div class="example">
     <p>{t("common.example.title")}</p>
@@ -33,10 +29,7 @@ setDefaultNamespace("pricing");
       {Array(t("common.example.pages", { returnObjects: true })).join(", ")}
     </p>
     <p>
-      {
-        Number(t(`${pricingType}.price.base`)) +
-          Number(t(`${pricingType}.price.page`)) * 5
-      }
+      {Number(priceBase) + Number(pricePage) * 5}
       {t("common.currency")}
     </p>
   </div>
