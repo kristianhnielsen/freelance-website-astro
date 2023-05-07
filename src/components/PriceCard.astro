@@ -3,12 +3,12 @@ import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
 interface Props {
+  standard?: boolean;
   name: string;
-  includedServices: string[];
   priceBase: string;
   pricePage: string;
 }
-const { name, includedServices, priceBase, pricePage } = Astro.props as Props;
+const { standard = false, name, priceBase, pricePage } = Astro.props as Props;
 
 setDefaultNamespace("pricing");
 ---
@@ -17,7 +17,7 @@ setDefaultNamespace("pricing");
   <img src="/assets/svg/logo.svg" alt="asd" />
   <h3>{name}</h3>
   <div class="included-services">
-    {includedServices.map((serviceItem: string) => <p>{serviceItem}</p>)}
+    <slot name="included-services" />
   </div>
   <div class="price">
     <p>+{pricePage} {t("common.perPageText")}</p>
@@ -26,7 +26,13 @@ setDefaultNamespace("pricing");
   <div class="example">
     <p>{t("common.example.title")}</p>
     <p>
-      {Array(t("common.example.pages", { returnObjects: true })).join(", ")}
+      {
+        `${t("common.example.pages.home")}, ${t(
+          "common.example.pages.about"
+        )}, ${t("common.example.pages.product")}, ${t(
+          "common.example.pages.services"
+        )}, ${t("common.example.pages.contact")}`
+      }
     </p>
     <p>
       {Number(priceBase) + Number(pricePage) * 5}
@@ -37,21 +43,8 @@ setDefaultNamespace("pricing");
   <Button primary href={"/contact"}>{t("common.button")}</Button>
 
   {
-    Array(
-      t("common.special-offer", {
-        returnObjects: true,
-      })
-    ).length > 0 && (
-      <div class="special-offer">
-        {Array.prototype.map.call(
-          t("common.special-offer", {
-            returnObjects: true,
-          }),
-          (line: string) => (
-            <p>{line}</p>
-          )
-        )}
-      </div>
+    t("common.special-offer") && (
+      <p class="special-offer">{t("common.special-offer")}</p>
     )
   }
 </div>

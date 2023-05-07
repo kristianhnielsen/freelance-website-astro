@@ -85,20 +85,37 @@ setDefaultNamespace("home");
         name={t("standard.name", { ns: "pricing" })}
         priceBase={t("standard.price.base", { ns: "pricing" })}
         pricePage={t("standard.price.page", { ns: "pricing" })}
-        includedServices={t("standard.included-services", {
-          ns: "pricing",
-          returnObjects: true,
-        })}
-      />
+      >
+        <p slot="included-services">
+          {t("common.services.responsive", { ns: "pricing" })}
+        </p>
+
+        <p slot="included-services">
+          {t("common.services.seo-basic", { ns: "pricing" })}
+        </p>
+        <p slot="included-services">
+          {t("common.services.form-basic", { ns: "pricing" })}
+        </p>
+      </PriceCard>
       <PriceCard
         name={t("advanced.name", { ns: "pricing" })}
         priceBase={t("advanced.price.base", { ns: "pricing" })}
         pricePage={t("advanced.price.page", { ns: "pricing" })}
-        includedServices={t("advanced.included-services", {
-          ns: "pricing",
-          returnObjects: true,
-        })}
-      />
+      >
+        <p slot="included-services">
+          {t("common.services.standard-plus", { ns: "pricing" })}
+        </p>
+
+        <p slot="included-services">
+          {t("common.services.maintenance-basic", { ns: "pricing" })}
+        </p>
+        <p slot="included-services">
+          {t("common.services.accessibility-basic", { ns: "pricing" })}
+        </p>
+        <p slot="included-services">
+          {t("common.services.speed-adv", { ns: "pricing" })}
+        </p>
+      </PriceCard>
     </div>
     <div class="faq">
       <h2>{t("faq.title", { ns: "common" })}</h2>
