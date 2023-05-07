@@ -3,14 +3,11 @@ import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
 interface Props {
-  standard?: boolean;
-  advanced?: boolean;
+  pricingType: string;
 }
-const { standard = false, advanced = false } = Astro.props as Props;
+const { pricingType } = Astro.props as Props;
 
 setDefaultNamespace("pricing");
-
-const pricingType = standard ? "standard" : advanced ? "advanced" : null;
 ---
 
 <div class="price-card">
