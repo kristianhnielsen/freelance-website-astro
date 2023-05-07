@@ -2,13 +2,7 @@
 import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
-interface Props {
-  name: string;
-  includedServices: string[];
-  priceBase: string;
-  pricePage: string;
-}
-const { name, includedServices, priceBase, pricePage } = Astro.props as Props;
+const { name, includedServices, priceBase, pricePage } = Astro.props;
 
 setDefaultNamespace("pricing");
 ---
@@ -17,7 +11,7 @@ setDefaultNamespace("pricing");
   <img src="/assets/svg/logo.svg" alt="asd" />
   <h3>{name}</h3>
   <div class="included-services">
-    {includedServices.map((serviceItem) => <p>{serviceItem}</p>)}
+    {includedServices.map((serviceItem: string) => <p>{serviceItem}</p>)}
   </div>
   <div class="price">
     <p>+{pricePage} {t("common.perPageText")}</p>
