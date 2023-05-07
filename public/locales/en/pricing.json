@@ -4,14 +4,26 @@
     "price": {
       "base": "400",
       "page": "55"
-    }
+    },
+    "included-services": [
+      "Responsive Design",
+      "SEO Fundamentals",
+      "Basic Contact Form"
+    ]
   },
   "advanced": {
     "name": "Advanced Website",
     "price": {
       "base": "650",
       "page": "65"
-    }
+    },
+    "included-services": [
+      "Standard Website Features",
+      "+",
+      "3 Months Maintenance Retainer",
+      "Accessibility Fundamentals",
+      "Advanced Speed Optimization"
+    ]
   },
 
   "common": {
@@ -20,24 +32,12 @@
     "button": "Get This Website",
     "example": {
       "title": "Example 5 Page Website",
-      "pages": {
-        "home": "Homepage",
-        "about": "About",
-        "product": "Product",
-        "services": "Services",
-        "contact": "Contact"
-      }
+      "pages": ["Homepage", "About", "Product", "Services", "Contact"]
     },
-    "services": {
-      "responsive": "Responsive Design",
-      "seo-basic": "SEO Fundamentals",
-      "form-basic": "Basic Contact Form",
-      "maintenance-basic": "3 Months Maintenance Retainer",
-      "accessibility-basic": "Accessibility Fundamentals",
-      "speed-adv": "Advanced Speed Optimization",
-      "standard-plus": "Standard Website Features",
-      "adv-plus": "Advanced Website Features"
-    },
-    "special-offer": "Orders Before 1st August Get 1 Year Free GDPR-Compliant Web Analytics"
+    "special-offer": [
+      "Orders Before 1st August",
+      "Get 1 Year Free",
+      "GDPR-Compliant Web Analytics"
+    ]
   }
 }

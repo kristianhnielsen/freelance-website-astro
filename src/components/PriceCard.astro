@@ -3,39 +3,35 @@ import Button from "./Button.astro";
 import { setDefaultNamespace, t } from "i18next";
 
 interface Props {
-  standard?: boolean;
-  name: string;
-  priceBase: string;
-  pricePage: string;
+  pricingType: string;
 }
-const { standard = false, name, priceBase, pricePage } = Astro.props as Props;
+const { pricingType } = Astro.props as Props;
 
 setDefaultNamespace("pricing");
 ---
 
 <div class="price-card">
   <img src="/assets/svg/logo.svg" alt="asd" />
-  <h3>{name}</h3>
+  <h3>{t(`${pricingType}.name`)}</h3>
   <div class="included-services">
-    <slot name="included-services" />
+    {
+      t(`${pricingType}.included-services`, {
+        returnObjects: true,
+      }).map((item: any) => <p>{item}</p>)
+    }
   </div>
   <div class="price">
-    <p>+{pricePage} {t("common.perPageText")}</p>
-    <p>{priceBase}<span>{t("common.currency")}</span></p>
+    <p>+{t(`${pricingType}.price.page`)} {t("common.perPageText")}</p>
+    <p>{t(`${pricingType}.price.base`)}<span>{t("common.currency")}</span></p>
   </div>
   <div class="example">
     <p>{t("common.example.title")}</p>
+    <p>{t("common.example.pages", { returnObjects: true }).join(", ")}</p>
     <p>
       {
-        `${t("common.example.pages.home")}, ${t(
-          "common.example.pages.about"
-        )}, ${t("common.example.pages.product")}, ${t(
-          "common.example.pages.services"
-        )}, ${t("common.example.pages.contact")}`
+        Number(t(`${pricingType}.price.base`)) +
+          Number(t(`${pricingType}.price.page`)) * 5
       }
-    </p>
-    <p>
-      {Number(priceBase) + Number(pricePage) * 5}
       {t("common.currency")}
     </p>
   </div>
@@ -43,8 +39,16 @@ setDefaultNamespace("pricing");
   <Button primary href={"/contact"}>{t("common.button")}</Button>
 
   {
-    t("common.special-offer") && (
-      <p class="special-offer">{t("common.special-offer")}</p>
+    t("common.special-offer", {
+      returnObjects: true,
+    }).length > 0 && (
+      <div class="special-offer">
+        {t("common.special-offer", {
+          returnObjects: true,
+        }).map((line: string) => (
+          <p>{line}</p>
+        ))}
+      </div>
     )
   }
 </div>
