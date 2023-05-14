@@ -187,7 +187,7 @@ _Tabbing_ means being able to select clickable elements like links and buttons o
 
 This is easy to test yourself, as you can go to any website and press tab through the website yourself. You’ll quickly notice if there are elements that are meant to be clicked, but doesn’t get selected.
 
-<img src="https://images.unsplash.com/photo-1574887427561-d3d5d58c9273?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=12" alt="Hands on a braille screen reader"/>
+<img src="https://images.unsplash.com/photo-1574887427561-d3d5d58c9273?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=12" alt="Hands on a braille screen reader" style="margin: 30px 0;"/>
 
 You can make any element focusable by adding a **`tabindex=0`** attribute value to it. That will add the element to the list of elements that can be focused. However, if you use HTML semantically, you will rarely have to use this, as `<a>` and `<button>` are already focusable.
 
