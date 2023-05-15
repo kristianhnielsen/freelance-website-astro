@@ -46,11 +46,11 @@ A client-side web analytics tool is Google Analytics. Information about the user
 
 However, Google Analytics and Google Tag Manager are not GDPR-compliant by default. Before collecting users' personal data, website owners must get their explicit permission in order to be complying with GDPR. This means informing users in plain terms about the data being gathered, how it will be used, and with whom it will be shared.
 
-Although Google has added Consent Mode to Google Tag Manager, and [lobbies for GDPR changes](https://techcrunch.com/2022/01/19/google-lobbies-for-new-privacy-shield/), this does not fix the core of Google's GDPR problem.
+Although Google has added Consent Mode to Google Tag Manager, and <a href="https://techcrunch.com/2022/01/19/google-lobbies-for-new-privacy-shield/" class="external-link">lobbies for GDPR changes</a>, this does not fix the core of Google's GDPR problem.
 
 Google sends the data to a different server when you use Google Analytics or Google Tag Manager, and that server filters the data and provides it to Google Analytics as requested. This means that even if consent defaults were put up with Google Analytics gtag.js during the initial configuration function, you are still providing Google with their users' personal information. As a result, if you configure the data you see in Google Analytics, you might believe that you are GDPR compliant, but Google has already collected the data at this point.
 
-**Read more**: [The Austrian Data Protection Authority decides that using Google Analytics violates GDPR](https://noyb.eu/en/austrian-dsb-eu-us-data-transfers-google-analytics-illegal)
+**Read more**: <a href="https://noyb.eu/en/austrian-dsb-eu-us-data-transfers-google-analytics-illegal" class="external-link">The Austrian Data Protection Authority decides that using Google Analytics violates GDPR</a>
 
 ## Reasons to Avoid Google Analytics
 
@@ -68,9 +68,9 @@ There are plenty of web analytics tools that brand themselves as compliant with 
 
 Popular privacy friendly web analytics services include:
 
-- <p><a href="https://plausible.io/" target="_blank" rel="noopener noreferrer">Plausible</a> &rarr; Easy to use and privacy-friendly Google Analytics alternative</p>
-- <p><a href="https://usefathom.com/" target="_blank" rel="noopener noreferrer">Fathom</a> &rarr; Is a Google Analytics alternative that doesn’t compromise visitor privacy for data. </p>
-- <p><a href="https://matomo.org/" target="_blank" rel="noopener noreferrer">Matomo</a> &rarr; Take back control with Matomo – a powerful web analytics platform that gives you 100% data ownership.</p>
+- <p><a href="https://plausible.io/" target="_blank"  rel="noopener noreferrer" class="external-link" >Plausible</a> &rarr; Easy to use and privacy-friendly Google Analytics alternative</p>
+- <p><a href="https://usefathom.com/" target="_blank" rel="noopener noreferrer" class="external-link" >Fathom</a> &rarr; Is a Google Analytics alternative that doesn’t compromise visitor privacy for data. </p>
+- <p><a href="https://matomo.org/" target="_blank" rel="noopener noreferrer" class="external-link" >Matomo</a> &rarr; Take back control with Matomo – a powerful web analytics platform that gives you 100% data ownership.</p>
 
 ## Conclusion
 

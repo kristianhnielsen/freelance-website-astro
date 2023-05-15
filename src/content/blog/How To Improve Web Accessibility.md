@@ -25,19 +25,19 @@ Making website content accessible means that all users can access with or withou
 
 ## Why should I care?
 
-[16% of the world population experience significant disability](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health), and the [WebAIM Million report](https://webaim.org/projects/million/) examined the home pages of the top 1 million websites and it was discovered that 96.3% of them failed to adhere to the most basic accessibility guidelines.
+<a href="https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health" class="external-link" target="_blank">16% of the world population experience significant disability</a>, and the <a href="https://webaim.org/projects/million/" class="external-link" target="_blank">WebAIM Million report</a> examined the home pages of the top 1 million websites and it was discovered that 96.3% of them failed to adhere to the most basic accessibility guidelines.
 
 You can miss out on a lot of potential visitors if your website is inaccessible! In addition, making your website more accessible increases Search Engine Optimisation and user experience for everyone.
 
 Not making a website accessible because it takes too long and not impacting the majority of users, is the same as saying "_it takes too much time to check grammar, spelling, and proof-read a document_". The process of designing and developing a website _should_ include web accessibility as a natural step alongside considerations for performance, style, and responsiveness for mobile devices.
 
-Web accessibility may be somewhat invisible and seems more like an add-on feature, until the legal systemgets involved. Numerous regulations may call for a website to be accessible, and both [Netflix](https://www.nad.org/2011/06/16/nad-files-disability-civil-rights-lawsuit-against-netflix/) and [Dominos](https://www.cnbc.com/2019/10/07/dominos-supreme-court.html) have been the target of lawsuits.
+Web accessibility may be somewhat invisible and seems more like an add-on feature, until the legal systemgets involved. Numerous regulations may call for a website to be accessible, and both <a href="https://www.nad.org/2011/06/16/nad-files-disability-civil-rights-lawsuit-against-netflix/" class="external-link" target="_blank">Netflix</a> and <a href="https://www.cnbc.com/2019/10/07/dominos-supreme-court.html" class="external-link" target="_blank">Dominos</a> have been the target of lawsuits.
 
 ## So what can I do?
 
 ### Alternative Text
 
-In fact, missing alternative text, also known as _alt text_ for images is [one of the biggest accessibility issues](https://webaim.org/projects/million/).
+In fact, missing alternative text, also known as _alt text_ for images is <a href="https://webaim.org/projects/million/" class="external-link" target="_blank">one of the biggest accessibility issues</a>.
 
 Alternative text can be a quick and easy way to add accessibility to images.
 
@@ -87,9 +87,9 @@ HTML already has a lot of descriptive elements that comes with built-in function
 
 Using HTML to semantically describe an elements position, function, or context, also greatly improves SEO performance, as well as code readability.
 
-This could be as simple as using the [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) and [<footer>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer) elements to properly describe where the content is located on the page.
+This could be as simple as using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" class="external-link" target="_blank">`<header>`</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" class="external-link" target="_blank">`<footer>`</a> elements to properly describe where the content is located on the page.
 
-The [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) element for dropdown accordions:
+The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" class="external-link" target="_blank">`<details>`</a> element for dropdown accordions:
 
 <div style="margin:  30px 0;">
 
@@ -122,7 +122,7 @@ The [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/deta
 </details>
 ```
 
-The [`<output>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output) element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action:
+The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output" class="external-link" target="_blank">`<output>`</a> element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action:
 
 <div style="margin:  30px 0;">
 
@@ -152,7 +152,7 @@ The [`<output>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/outpu
 </form>
 ```
 
-or more descriptive elements like [`<address>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address) and [`<time>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time).
+or more descriptive elements like <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address" class="external-link" target="_blank">`<address>`</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" class="external-link" target="_blank">`<time>`</a>.
 
 ### Color Contrast
 
@@ -179,7 +179,7 @@ To ensure good color contrast, accessibility guidelines recommend a minimum cont
 
 Most browsers come with a built-in contrast checking tool. In Chrome and Firefox you can find it by opening the developer tools (`Ctrl + Shift + i`), and click the element inspector at the top (`Ctrl + Shift + C`). Now you can hover the cursor anywhere on any website and see the contrast ratio.
 
-If you are trying to pick a color and wish to see the contrast, I like to use [Colour Contrast Checker](https://colourcontrast.cc/).
+If you are trying to pick a color and wish to see the contrast, I like to use <a href="https://colourcontrast.cc/" class="external-link" target="_blank">Colour Contrast Checker</a>.
 
 ### Tabbing
 
@@ -248,15 +248,15 @@ An example of a skip element could look like this:
 
 If you’d like some more tools to improve web accessibility, here are some tools and resources:
 
-- [**WAVE**](https://wave.webaim.org/) can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content.
+- <a href="https://wave.webaim.org/" target="_blank" class="external-link">WAVE</a> can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content.
 
-- [**aXe Devtools**](https://www.deque.com/axe/) is powerful and accurate accessibility toolkit can get you to 80% issue coverage, or more, during development.
+- <a href="https://www.deque.com/axe/" target="_blank" class="external-link">aXe Devtools</a> is powerful and accurate accessibility toolkit can get you to 80% issue coverage, or more, during development.
 
-- W3’s [**Web Content Accessibility Guidelines (WCAG)**](https://www.w3.org/WAI/standards-guidelines/wcag/) international standard.
+- W3’s <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" class="external-link">Web Content Accessibility Guidelines (WCAG)</a> international standard.
 
-- W3’s [**list of governmental policies**](https://www.w3.org/WAI/policies/) related to web accessibility.
+- W3’s <a href="https://www.w3.org/WAI/policies/" target="_blank" class="external-link">list of governmental policies</a> related to web accessibility.
 
-- [**NVDA**](https://www.nvaccess.org/download/) software allows blind and vision impaired people to access and interact with the Windows operating system and many third party applications.
+- <a href="https://www.nvaccess.org/download/" target="_blank" class="external-link">NVDA</a> software allows blind and vision impaired people to access and interact with the Windows operating system and many third party applications.
 
 ## Conclusion
 
