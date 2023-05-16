@@ -1,7 +1,7 @@
 ---
 title: "How To Improve Web Accessibility"
 description: We go over what accessibility is, how you can benefit from it, and some basics steps and example to improve your website for all users.
-published: 2023-05-14
+published: 2023-05-16
 language: "en"
 author: Kristian Nielsen
 images:
