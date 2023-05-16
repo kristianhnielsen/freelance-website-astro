@@ -1,0 +1,27 @@
+---
+import { setDefaultNamespace, t } from "i18next";
+
+setDefaultNamespace("common");
+---
+
+<a href="#main" class="skip-to-main-content-link">{t("nav.skip-to-content")}</a>
+
+<style>
+  .skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 30px;
+    background-color: var(--dark);
+    font-size: 30px;
+    color: var(--white);
+    opacity: 0;
+    border: 10px solid var(--accent-primary);
+  }
+  .skip-to-main-content-link:focus {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+</style>

@@ -2,11 +2,13 @@
 import { LanguageSelector } from "astro-i18next/components";
 import { setDefaultNamespace, t } from "i18next";
 import { localizePath } from "astro-i18next";
+import SkipToContent from "./SkipToContent.astro";
 
 setDefaultNamespace("common");
 ---
 
 <header id="header">
+  <SkipToContent />
   <a href={localizePath("/")} class="logo">
     <img src="/logo.svg" alt="A pink blob and a green blob" aria-label="logo" />
   </a>
