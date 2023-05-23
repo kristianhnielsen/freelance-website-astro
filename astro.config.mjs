@@ -15,6 +15,14 @@ export default defineConfig({
         page !== "https://www.kristiannielsen.com/thank-you/" &&
         page !== "https://www.kristiannielsen.com/zh/thank-you/" &&
         page !== "https://www.kristiannielsen.com/da/thank-you/",
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en",
+          da: "da",
+          zh: "zh",
+        },
+      },
     }),
   ],
 });
