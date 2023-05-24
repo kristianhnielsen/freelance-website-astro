@@ -17,20 +17,12 @@ const { question, answers } = Astro.props;
     color: var(--dark);
     transition: all 0.5s ease-in-out;
 
-    &:not([open]) summary {
-      font-weight: 600;
-    }
-
-    &[open] summary {
-      font-weight: 300;
-    }
-
-    &[open] {
+    & summary {
+      font-weight: 700;
     }
 
     & p {
-      margin-left: 15px;
-      margin-bottom: 10px;
+      margin: 10px 0;
       cursor: auto;
     }
 
