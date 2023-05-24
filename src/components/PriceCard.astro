@@ -106,16 +106,17 @@ setDefaultNamespace("pricing");
     }
 
     & .price {
-      & p {
-        font-weight: 800;
+      & p:first-child {
+        font-weight: 700;
+      }
 
-        &:last-child {
-          font-size: 70px;
-          color: var(--accent-primary);
+      & p:last-child {
+        font-weight: 900;
+        font-size: 70px;
+        color: var(--accent-primary);
 
-          & span {
-            font-size: 16px;
-          }
+        & span {
+          font-size: 16px;
         }
       }
     }
@@ -125,6 +126,7 @@ setDefaultNamespace("pricing");
 
       & p {
         font-size: 12px;
+        font-weight: 600;
 
         &:last-child {
           text-decoration: underline;
@@ -139,7 +141,7 @@ setDefaultNamespace("pricing");
       margin-top: 20px;
       width: calc(100% + 20px);
       text-transform: capitalize;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 </style>
