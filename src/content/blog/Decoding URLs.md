@@ -84,7 +84,14 @@ In a nutshell, when you type in `google.com`, your computer asks your network pr
 
 We even have geographical TLDs like `.fr`, `.jp`, `.uk`, but there are also more general TLDs to indicate your type of website e.g. `.com` for commercial, `.gov` for government websites, and `.org` for organisations.
 
-In recent years, more and more types of TLDs have become popular to finetune your audience and show your type of website, e.g. `.dev` for developers and their portfolio websites, `.me` for personal websites, blogs, portfolios, etc., `.wiki` for informational websites, `.kids` for kid-friendly content...
+In recent years, more and more types of TLDs have become popular to finetune your audience and show your type of website, for example:
+
+- **.dev** for developers and their portfolio websites
+- **.me** for personal websites, blogs, portfolios
+- **.wiki** for informational websites
+- **.kids** for kid-friendly content
+
+<img src="https://images.unsplash.com/photo-1530406472580-81dc39c4babe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1692&q=12" alt="view from dark tunnel through an open gate to a grassy sunlit field" style="width: 100%; object-fit: cover; max-height: 500px;" />
 
 ### Port
 
@@ -121,6 +128,6 @@ A fragment in the URL doesn't change the content of a page like what parameters 
 
 ## Conclusion
 
-By gaining a comprehensive understanding of the components within a URL, you become a savvy online navigator.
+By gaining an understanding of the components of a URL, you become a savvy online navigator.
 With this knowledge you can better distinguish between secure and unsecure links, lowering the risks of falling victim to malicious intent, and allows you to see if the link is taking you where the link text tells you it's going.
 Practice being aware of the URLs, change them if you need to, and browse the web like a pro.
