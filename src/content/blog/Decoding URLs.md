@@ -21,26 +21,16 @@ images:
 
 Uniform Resource Locators (URLs) are what we use to tell the computer where we want to go. While the principle of URLs also somewhat apply to how you find your files on your computer, there are a few more elements in the network URLs you will find when browsing the web.
 
-<div style="display: grid; gap: 10px; margin: 60px; font-size: 20px; font-weight: 700; max-width: 100%;">
-  <p style="display: flex; justify-content: center; align-self: center; gap: 3px; flex-wrap: wrap;">
-    <a href="#scheme" style="color:#c93b93; text-decoration: none;">scheme://</a>
-    <a href="#subdomain" style="color:#856dd0; text-decoration: none;">subdomain.</a>
-    <a href="#second-level-domain-sld" style="color:#ce69b5; text-decoration: none;">SLD</a>
-    <a href="#top-level-domain-tld" style="color:#cd7f65; text-decoration: none;">.TLD</a>
-    <a href="#port" style="color:#6dd085; text-decoration: none;">:PORT</a>
-    <a href="#path" style="color:#7db3c5; text-decoration: none;">/path</a>
-    <a href="#query-and-parameters" style="color:#4e7683; text-decoration: none;">?key=value</a>
-    <a href="#fragment" style="color:#cbbb8b; text-decoration: none;">#fragment</a>
-  </p>
-  <p style="display: flex; justify-content: center; align-self: center; gap: 3px; flex-wrap: wrap;">
-    <a href="#scheme" style="color:#c93b93; text-decoration: none;">https://</a>
-    <a href="#subdomain" style="color:#856dd0; text-decoration: none;">offer.</a>
-    <a href="#second-level-domain-sld" style="color:#ce69b5; text-decoration: none;">kristiannielsen</a>
-    <a href="#top-level-domain-tld" style="color:#cd7f65; text-decoration: none;">.com</a>
-    <a href="#port" style="color:#6dd085; text-decoration: none;">:443</a>
-    <a href="#path" style="color:#7db3c5; text-decoration: none;">/services</a>
-    <a href="#query-and-parameters" style="color:#4e7683; text-decoration: none;">?product=1234</a>
-    <a href="#fragment" style="color:#cbbb8b; text-decoration: none;">#price</a>
+<div class="url-example">
+  <p>
+    <a href="#scheme" class="scheme">scheme://</a>
+    <a href="#subdomain" class="subdomain">subdomain.</a>
+    <a href="#second-level-domain-sld" class="sld">SLD</a>
+    <a href="#top-level-domain-tld" class="tld">.TLD</a>
+    <a href="#port" class="port">:PORT</a>
+    <a href="#path" class="path">/path</a>
+    <a href="#query-and-parameters" class="params">?key=value</a>
+    <a href="#fragment" class="fragment">#fragment</a>
   </p>
 </div>
 
@@ -48,12 +38,12 @@ Uniform Resource Locators (URLs) are what we use to tell the computer where we w
 
 URLs consists of different parts, but only the base URL is mandatory for the browser to understand it, and typically the browser will help you to add the scheme for you.
 
-<div style="display: grid; gap: 10px; margin: 20px; font-size: 20px; font-weight: 700; max-width: 100%;">
-  <p style="display: flex; justify-content: center; align-self: center; gap: 3px; flex-wrap: wrap;">
+<div class="url-example">
+  <p>
     Base URL: 
-    <a href="#scheme" style="color:#c93b93; text-decoration: none;">scheme://</a>
-    <a href="#second-level-domain-sld" style="color:#ce69b5; text-decoration: none;">SLD</a>
-    <a href="#top-level-domain-tld" style="color:#cd7f65; text-decoration: none;">.TLD</a>
+    <a href="#scheme" class="scheme">scheme://</a>
+    <a href="#second-level-domain-sld" class="sld">SLD</a>
+    <a href="#top-level-domain-tld" class="tld">.TLD</a>
     </p>
 </div>
 
@@ -112,6 +102,16 @@ If you do not specify a path, you will be taken to the homepage, the intended st
 Have you ever noticed, that when you search on Google, your URL changes?
 This is because the URL contains information about what you searched for. For example, if you search "what is a url", the URL will be `google.com/search?q=what+is+a+url`. A URL cannot contain spaces and will typically be replaced with a plus sign (+) or `%20`.
 
+<div class="url-example">
+  <a href="https://google.com/search?q=what+is+a+url" target="_blank" style="justify-self:center;">
+    <span class="scheme">https://</span>
+    <span class="sld">google</span>
+    <span class="tld">.com</span>
+    <span class="path">/search</span>
+    <span class="params">?q=what+is+a+url</span>
+  </a>
+</div>
+
 Query is marked with a question mark (?), and everything that comes after are the query parameters in so-called key-value pairs. These tell the website that you want to see a filtered or specific version of the website.
 
 A URL can have many parameters seperated by `&`, which can help finding exactly the page you want to see. That could be search results on Amazon, where you have already search on `pillow`, and selected the materials, price range, and that you sort by price low to high. All this information in URL.
@@ -131,3 +131,63 @@ A fragment in the URL doesn't change the content of a page like what parameters 
 By gaining an understanding of the components of a URL, you become a savvy online navigator.
 With this knowledge you can better distinguish between secure and unsecure links, lowering the risks of falling victim to malicious intent, and allows you to see if the link is taking you where the link text tells you it's going.
 Practice being aware of the URLs, change them if you need to, and browse the web like a pro.
+
+<style lang="scss">
+  .url-example {
+    display: grid; 
+    margin: 30px 0; 
+    font-size: 20px;
+    font-weight: 700; 
+    max-width: 100%;
+
+    @media (max-width: 700px) {
+      font-size: 10px;
+      }
+
+    & p {
+      display: flex; 
+      justify-content: center; 
+      align-self: center; 
+      gap: 3px;
+      flex-wrap: wrap;
+      font-size: inherit;
+    }
+    
+    & a {
+      text-decoration: none;
+      font-size: inherit;
+    }
+  }
+
+  .scheme {
+    color: #c93b93;
+  }
+
+  .subdomain {
+    color: #cd7f65;
+  }  
+
+  .sld {
+    color: #856dd0;
+  }
+
+  .tld {
+    color: #ce69b5;
+  }
+  
+  .path {
+    color:#7db3c5;
+  }
+  
+  .params {
+    color:#4e7683;
+  }
+
+  .fragment {
+    color:#cbbb8b;
+  }
+
+  .port {
+    color:#6dd085;
+  }
+</style>
