@@ -103,7 +103,7 @@ Have you ever noticed, that when you search on Google, your URL changes?
 This is because the URL contains information about what you searched for. For example, if you search "what is a url", the URL will be `google.com/search?q=what+is+a+url`. A URL cannot contain spaces and will typically be replaced with a plus sign (+) or `%20`.
 
 <div class="url-example">
-  <a href="https://google.com/search?q=what+is+a+url" target="_blank" style="justify-self:center;">
+  <a href="https://google.com/search?q=what+is+a+url" target="_blank">
     <span class="scheme">https://</span>
     <span class="sld">google</span>
     <span class="tld">.com</span>
@@ -134,20 +134,17 @@ Practice being aware of the URLs, change them if you need to, and browse the web
 
 <style lang="scss">
   .url-example {
-    display: grid; 
+    display: flex; 
     margin: 30px 0; 
     font-size: 20px;
     font-weight: 700; 
-    max-width: 100%;
 
     @media (max-width: 700px) {
-      font-size: 10px;
+      font-size: 12px;
       }
 
     & p {
       display: flex; 
-      justify-content: center; 
-      align-self: center; 
       gap: 3px;
       flex-wrap: wrap;
       font-size: inherit;
