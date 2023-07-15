@@ -44,7 +44,7 @@ Alternative text can be a quick and easy way to add accessibility to images.
 Alternative text is added on the `<img>` element, and if the image fails to load, the alt text will be shown instead.
 
 <div style="display:flex; flex-wrap: wrap; justify-content: space-evenly;">
-<div>
+<div style="max-width: 40%">
 
 **Image found, alt text not showing:** </br>
 <img
@@ -54,7 +54,7 @@ Alternative text is added on the `<img>` element, and if the image fails to load
 />
 
 </div>
-<div>
+<div style="max-width: 40%">
 
 **Image not found, alt text is showing:** </br>
 <img
@@ -91,7 +91,7 @@ This could be as simple as using the <a href="https://developer.mozilla.org/en-U
 
 The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" class="external-link" target="_blank">`<details>`</a> element for dropdown accordions:
 
-<div style="margin:  30px 0;">
+<div style="margin: 30px 0;">
 
 **Example**
 
@@ -124,7 +124,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" 
 
 The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output" class="external-link" target="_blank">`<output>`</a> element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action:
 
-<div style="margin:  30px 0;">
+<div style="margin: 30px 0;">
 
 **Example**
 
@@ -161,7 +161,7 @@ Good color contrast is critical for web accessibility. It helps make content mor
 To ensure good color contrast, accessibility guidelines recommend a minimum contrast ratio of 4.5:1 for normal text, although the ratio may vary depending on text size and weight. Tools are available to check color contrast and ensure that it meets the required standards.
 
 <div style="display:flex; flex-wrap: wrap; justify-content: space-evenly; margin:30px 0;">
-<div>
+<div style="max-width: 40%">
 
 **High contrast** - contrast ratio 7.26
 
@@ -169,7 +169,7 @@ To ensure good color contrast, accessibility guidelines recommend a minimum cont
 
 </div>
 
-<div>
+<div style="max-width: 40%">
 
 **Low contrast** - contrast ratio 1.00
 

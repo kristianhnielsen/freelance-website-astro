@@ -136,7 +136,7 @@ Practice being aware of the URLs, change them if you need to, and browse the web
   .url-example {
     display: flex; 
     margin: 30px 0; 
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700; 
 
     @media (max-width: 700px) {
