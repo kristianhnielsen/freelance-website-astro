@@ -1,5 +1,5 @@
 ---
-title: "Getting Started With Sanity in Astro"
+title: "Getting Started With Sanity In Astro"
 description: A guide for integrating Sanity.io headless CMS into a frontend project with Astro.
 published: 2023-07-16
 language: "en"
