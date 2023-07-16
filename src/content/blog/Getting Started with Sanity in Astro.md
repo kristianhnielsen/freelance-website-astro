@@ -27,7 +27,7 @@ I'll cover how to setup Astro and Sanity, and link the two, as well as how to fe
 
 If you're interested in seeing a project made with Astro and Sanity, I have made a <a href="https://coffee-demo.vercel.app" class="external-link" target="_blank">live demo site</a>. Visit the <a href="https://github.com/kristianhnielsen/coffee-demo" class="external-link" target="_blank">Github repo</a>, if you're interested diving into the code.
 
-Table of content
+### Table of content
 
 - <a href="#sanity-studio">Sanity Studio</a>
 - <a href="#astro">Astro</a>
