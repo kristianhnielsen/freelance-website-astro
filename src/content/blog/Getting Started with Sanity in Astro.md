@@ -21,11 +21,9 @@ images:
 
 🚀Astro and Sanity are both excellent solutions in their own right; <a href="https://astro.build/" target="_blank" class="external-link">Astro</a> being a beginner-friendly Javascript framework, primarily focusing on building static websites by default. <a href="https://www.sanity.io/" class="external-link" target="_blank">Sanity.io</a> is a Content Management System (CMS) with a generous free tier.
 
-Astro has a bunch of <a href="https://astro.build/integrations" class="external-link" target="_blank">plugins</a> which makes it easy to integrate various technologies into your Astro projects, and while there is <a href="https://astro.build/integrations?search=sanity" class="external-link" target="_blank">a plugin for Sanity</a>, it's not maintained by the Astro team nor the Sanity team. For this reason I will not be using that plugin in this tutorial.
+In this guide we'll be using Astro and Sanity to build a functional blog, with an additional challenge at the end to let you practice what you've learned.
 
-In this guide we'll be using Astro and Sanity to build a blog from start to finish, with an additional challenge at the end to let you practice what you've learned.
-
-In this guide, I'll cover how to setup Astro and Sanity, and link the two, as well as how to fetch data from the <a href="https://www.sanity.io/docs/datastore" class="external-link">Sanity Content Lake</a>.
+I'll cover how to setup Astro and Sanity, and link the two, as well as how to fetch data from the <a href="https://www.sanity.io/docs/datastore" class="external-link">Sanity Content Lake</a>.
 
 If you're interested in seeing a project made with Astro and Sanity, I have made a <a href="https://coffee-demo.vercel.app" class="external-link" target="_blank">live demo site</a>. Visit the <a href="https://github.com/kristianhnielsen/coffee-demo" class="external-link" target="_blank">Github repo</a>, if you're interested diving into the code.
 
