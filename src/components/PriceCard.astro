@@ -54,16 +54,15 @@ setDefaultNamespace("pricing");
       t("common.special-offer", {
         returnObjects: true,
       })
-    ).length !== 0 && (
-      <div class="special-offer">
-        {Array.prototype.map.call(
-          t("common.special-offer", { returnObjects: true }),
-          (line: string) => (
+    ).length !== 0 &&
+      Array.prototype.map.call(
+        t("common.special-offer", { returnObjects: true }),
+        (line: string) => (
+          <div class="special-offer">
             <p>{line}</p>
-          )
-        )}
-      </div>
-    )
+          </div>
+        )
+      )
   }
 </div>
 
