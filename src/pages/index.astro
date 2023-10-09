@@ -68,24 +68,26 @@ setDefaultNamespace("home");
 
   <section class="projects">
     <h2>{t("projects.title")}</h2>
-    <Project
-      img="/assets/projects/adhd-konsulent.jpg"
-      href="https://adhd-konsulent.dk"
-      name="ADHD Konsulent"
-      services={[
-        t("projects.category.design"),
-        t("projects.category.development"),
-      ].join(", ")}
-    />
-    <Project
-      img="/assets/projects/coffee-demo.jpg"
-      href="https://coffee-demo.vercel.app/"
-      name="Brew Masters"
-      services={[
-        t("projects.category.design"),
-        t("projects.category.development"),
-      ].join(", ")}
-    />
+    <div class="projects-wrapper">
+      <Project
+        img="/assets/projects/adhd-konsulent.jpg"
+        href="https://adhd-konsulent.dk"
+        name="ADHD Konsulent"
+        services={[
+          t("projects.category.design"),
+          t("projects.category.development"),
+        ].join(", ")}
+      />
+      <Project
+        img="/assets/projects/coffee-demo.jpg"
+        href="https://coffee-demo.vercel.app/"
+        name="Brew Masters"
+        services={[
+          t("projects.category.design"),
+          t("projects.category.development"),
+        ].join(", ")}
+      />
+    </div>
   </section>
 
   <section class="price">
@@ -177,14 +179,16 @@ setDefaultNamespace("home");
   }
 
   .projects {
-    display: grid;
     gap: 20px;
     width: 100%;
     grid-template-columns: 1fr;
-    justify-items: center;
 
-    // uncomment this to make grid for multiple projects
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    & .projects-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      gap: 20px;
+    }
   }
 
   .cta {
