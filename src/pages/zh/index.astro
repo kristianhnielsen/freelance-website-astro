@@ -77,6 +77,15 @@ setDefaultNamespace("home");
         t("projects.category.development"),
       ].join(", ")}
     />
+    <Project
+      img="/assets/projects/coffee-demo.jpg"
+      href="https://coffee-demo.vercel.app/"
+      name="Brew Masters"
+      services={[
+        t("projects.category.design"),
+        t("projects.category.development"),
+      ].join(", ")}
+    />
   </section>
 
   <section class="price">
@@ -175,7 +184,7 @@ setDefaultNamespace("home");
     justify-items: center;
 
     // uncomment this to make grid for multiple projects
-    // grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
   .cta {
