@@ -40,6 +40,9 @@ const { href, img, name, services } = Astro.props;
       & img {
         object-fit: contain;
         width: 200px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        object-position: top;
         border-image: linear-gradient(
             -45deg,
             var(--accent-primary),
