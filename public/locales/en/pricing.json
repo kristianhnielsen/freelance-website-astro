@@ -34,10 +34,6 @@
       "title": "Example 5 Page Website",
       "pages": ["Homepage", "About", "Product", "Services", "Contact"]
     },
-    "special-offer": [
-      "Orders Before 1st August",
-      "Get 1 Year Free",
-      "GDPR-Compliant Web Analytics"
-    ]
+    "special-offer": []
   }
 }

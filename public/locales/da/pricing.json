@@ -34,10 +34,6 @@
       "title": "5 Siders Hjemmeside Eksempel",
       "pages": ["Hjem", "Om Os", "Produkter", "Services", "KontaKt"]
     },
-    "special-offer": [
-      "Bestil Før 1. August",
-      "Få 1 Års Gratis",
-      "GDPR-Sikkert Web Analytics"
-    ]
+    "special-offer": []
   }
 }
