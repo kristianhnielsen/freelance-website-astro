@@ -4,7 +4,6 @@ import Navbar from "../components/navigation/Navbar.astro";
 import "../styles/global.scss";
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
-import PlausibleAnalytics from "../components/analytics/PlausibleAnalytics.astro";
 
 const { title, description, socialImage } = Astro.props;
 const image = socialImage ?? "/assets/img/profile.png";
@@ -13,7 +12,6 @@ const image = socialImage ?? "/assets/img/profile.png";
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
-    <PlausibleAnalytics />
     <HeadHrefLangs />
 
     <!-- Global Metadata -->
